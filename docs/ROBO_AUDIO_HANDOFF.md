@@ -1,0 +1,15 @@
+# Robo sound effects — November 14, 2026
+
+Changed `src/App.tsx` to call the additive `src/ui/use-robo-audio.ts` hook. Added its tests. The existing `use-mission-audio.ts`, music selection, authored audio cues and all recordings are unchanged. No dependencies, environment settings, engine effects or shared contracts changed.
+
+Uses the five existing OPUS recordings in `public/assets/audio`: Happy Hello, Good Job, Curious, Uh Oh, and Typing/Thinking. URLs encode filenames including spaces and punctuation. Hello plays on Robo's first visible text in a run; Curious plays on choices; resource decreases play Uh Oh; committed choice gains play Good Job (after Uh Oh when there is also a cost). Dialogue/narration gets a quiet thinking burst. Clips are capped at 0.65–1.6 seconds, with no looping or overlap within the new robot channel. Existing music/SFX can still play alongside it.
+
+The hook consumes SceneTransition, SceneStep and committed meter snapshots read-only. Tracks stop on mute, leaving the scene, opening an overlay, or moving to another step. Seen visits prevent duplicate playback and settings toggles from replaying a line. Autoplay rejection is ignored without blocking mission progress. No choice letter is labeled correct or incorrect.
+
+Validation: seven audio tests and eight existing App integration tests passed. Targeted ESLint, typecheck and production build passed. Build reports an existing unresolved `/assets/bg/mars_vista.jpg` reference; that background was previously deleted upstream and is outside this audio change. Automated checks cover file availability, StrictMode/deduplication, choice cues, mute, short thinking bursts, resource changes and sequential cost/gain feedback. Manual listening/browser playback and volume balance against the existing recordings remain to be checked; no subjective audio quality approval is claimed. Source/license details of supplied recordings still need the content owner's inventory.
+
+Manual check: enable Sound, start a mission, listen for Hello at the first Robo text, Thinking on the next text, and Curious at the choice. Choose a resource tradeoff, wait briefly on its result and listen for cost then gain feedback. Toggle Sound off during playback and open Settings to confirm the robot clip stops. Confirm existing mission music and wrench/radio/meteor cues still work. Test in the intended browser because autoplay/OPUS support varies. No separate integration is needed from another owner.
+
+Balance follow-up: Uh Oh retains its original 1300ms playback cap and uses volume 0.07. It now plays at most once per 12 seconds per run to avoid reacting repeatedly to routine costs. Good Job uses volume 0.24 and a 2200ms cap, and still plays for positive tradeoffs when concern is suppressed. All eight audio tests pass, including the repetition limit. Other music and effects remain unchanged.
+
+Mini-game completion follow-up: a committed miniGame=done result now plays Good Job exclusively, overriding any associated resource cost. Skipped tasks retain ordinary resource feedback. All ten audio tests pass, including completed/skipped task cases.

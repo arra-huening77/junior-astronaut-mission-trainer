@@ -1,0 +1,22 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+coverage/
+.vite/
+.vercel/
+.netlify/
+
+# Secrets: commit only the empty example
+.env
+.env.*
+!.env.example
+
+# Local tools and temporary output
+tmp/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local Python preparation artifacts
+__pycache__/
+*.py[cod]

@@ -1,0 +1,333 @@
+/* Prologue — starfield, spinning Mars, glowing Tiny Habitat brand */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Nunito:wght@600;700;800&display=swap');
+
+.prologue-shell {
+  --pro-ink: #eaf7ff;
+  --pro-glow: #7ec8ff;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+  color: var(--pro-ink);
+  background: #000;
+}
+
+.prologue-sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 18% 70%,
+      rgba(40, 70, 140, 0.22),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 85% 40%,
+      rgba(180, 70, 30, 0.16),
+      transparent 38%
+    ),
+    linear-gradient(180deg, #000 0%, #050814 55%, #0a0610 100%);
+}
+
+.prologue-nebula {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 22% 48%,
+      rgba(120, 160, 255, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 62%,
+      rgba(255, 255, 255, 0.06),
+      transparent 18%
+    );
+  filter: blur(1px);
+}
+
+.prologue-stars {
+  position: absolute;
+  inset: -15%;
+  background-image:
+    radial-gradient(1.5px 1.5px at 4% 12%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 9% 38%, #cfe8ff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 14% 72%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 18% 22%, #ffe9b8 50%, transparent 51%),
+    radial-gradient(2px 2px at 23% 55%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 8%, #d7f0ff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 33% 44%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 37% 81%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 42% 18%, #cfe8ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 47% 63%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 52% 29%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 57% 76%, #ffe9b8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 62% 11%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 66% 48%, #d7f0ff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 71% 88%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 76% 33%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 81% 59%, #cfe8ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 86% 14%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 91% 70%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 95% 41%, #ffe9b8 50%, transparent 51%),
+    radial-gradient(1px 1px at 7% 91%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 49% 5%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 92%, #d7f0ff 50%, transparent 51%);
+  opacity: 0.95;
+}
+
+.prologue-stars--far {
+  opacity: 0.55;
+  transform: scale(1.15);
+  animation: prologue-drift 80s linear infinite;
+}
+
+.prologue-stars--near {
+  animation: prologue-drift 52s linear infinite reverse;
+}
+
+/*
+ * Reference composition: oversized sphere on the right, cropped past the edge.
+ * Diameter tracks viewport height so it stays spherical; right offset crops
+ * enough that the visible disc fills ~48–50% of the hero width on desktop.
+ */
+.prologue-mars {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  left: auto;
+  width: min(75vw, 108vh);
+  max-width: none;
+  aspect-ratio: 1;
+  transform: translateY(-44%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.prologue-mars__sphere {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #8a2f18;
+  background-image: url('/assets/bg/mars_globe.jpg');
+  background-repeat: repeat-x;
+  background-position: 18% center;
+  background-size: 200% 100%;
+  box-shadow:
+    inset -40px -22px 70px rgba(8, 0, 0, 0.65),
+    inset 18px 10px 36px rgba(255, 190, 120, 0.14),
+    -6px 0 28px rgba(255, 90, 30, 0.35),
+    0 0 80px rgba(255, 110, 40, 0.22);
+  animation: prologue-mars-spin 55s linear infinite;
+}
+
+.prologue-mars__atmosphere {
+  position: absolute;
+  inset: -4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 30% 32%,
+      rgba(255, 210, 160, 0.14) 0%,
+      transparent 40%
+    ),
+    /* Bright orange-red limb glow on the lit left edge */
+    radial-gradient(
+        circle at 12% 48%,
+        rgba(255, 120, 40, 0.55) 0%,
+        rgba(255, 90, 20, 0.22) 18%,
+        transparent 42%
+      ),
+    radial-gradient(
+      circle at 72% 58%,
+      transparent 52%,
+      rgba(255, 100, 35, 0.28) 78%,
+      rgba(255, 130, 55, 0.4) 100%
+    );
+  pointer-events: none;
+}
+
+.prologue-mars__shade {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 26% 34%,
+    rgba(255, 230, 190, 0.18) 0%,
+    transparent 36%,
+    rgba(12, 0, 0, 0.42) 100%
+  );
+  box-shadow:
+    inset -48px -20px 70px rgba(0, 0, 0, 0.55),
+    inset 8px 0 24px rgba(255, 100, 40, 0.18);
+  pointer-events: none;
+}
+
+.prologue-brand {
+  position: absolute;
+  left: clamp(1.25rem, 6vw, 4rem);
+  top: auto;
+  bottom: clamp(32%, 36vh, 44%);
+  z-index: 2;
+  max-width: min(40vw, 400px);
+  animation: prologue-brand-in 0.85s ease-out both;
+}
+
+.prologue-brand__name {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.05em;
+  font-family: 'Orbitron', 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 8vw, 5.2rem);
+  line-height: 0.92;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f7fbff;
+  text-shadow:
+    0 0 8px rgba(126, 200, 255, 0.95),
+    0 0 22px rgba(80, 170, 255, 0.75),
+    0 0 48px rgba(60, 140, 255, 0.45),
+    0 2px 0 rgba(0, 40, 80, 0.35);
+}
+
+.prologue-brand__line {
+  display: block;
+}
+
+.prologue-brand__tag {
+  display: inline-flex;
+  margin: 1rem 0 0;
+  padding: 0.45rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 170, 255, 0.55);
+  background: rgba(8, 16, 40, 0.72);
+  color: #f0f6ff;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 18px rgba(80, 150, 255, 0.25);
+}
+
+.prologue-stage {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  display: grid;
+  align-content: end;
+  gap: 0.65rem;
+  padding: 1rem;
+}
+
+.prologue-card {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+.prologue-card .ui-dialogue:has(.ui-portrait--hero) {
+  translate: none;
+  width: 100%;
+}
+.prologue-card .ui-dialogue__text {
+  min-height: 3.2em;
+}
+
+.prologue-skip {
+  justify-self: center;
+  min-height: 40px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 2px solid rgba(0, 210, 255, 0.4);
+  background: rgba(12, 20, 40, 0.65);
+  color: #eaf7ff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.prologue-shell--static .prologue-stars--far,
+.prologue-shell--static .prologue-stars--near,
+.prologue-shell--static .prologue-mars__sphere,
+.prologue-shell--static .prologue-brand {
+  animation: none;
+}
+
+.prologue-mars--static .prologue-mars__sphere {
+  background-position: 28% center;
+}
+
+@keyframes prologue-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-3%, 2%, 0);
+  }
+}
+
+@keyframes prologue-mars-spin {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes prologue-brand-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .prologue-mars {
+    right: -12%;
+    width: min(78vw, 100vh);
+    top: 50%;
+  }
+
+  .prologue-brand {
+    max-width: min(46vw, 320px);
+    bottom: clamp(34%, 38vh, 46%);
+  }
+}
+
+@media (max-width: 720px) {
+  .prologue-mars {
+    right: -18%;
+    width: min(85vw, 78vh);
+    top: 44%;
+    transform: translateY(-40%);
+  }
+
+  .prologue-brand {
+    top: 14%;
+    bottom: auto;
+    max-width: min(52vw, 280px);
+  }
+
+  .prologue-brand__name {
+    font-size: clamp(1.7rem, 9vw, 2.8rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .prologue-card {
+    align-items: flex-start;
+  }
+
+  .prologue-brand {
+    left: 1rem;
+    top: 10%;
+    max-width: 55%;
+  }
+}

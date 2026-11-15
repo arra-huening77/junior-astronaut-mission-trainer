@@ -1,0 +1,16 @@
+node_modules
+dist
+coverage
+package-lock.json
+public/assets
+asset-preparation
+
+# Imported planning content is formatted separately from application code.
+README.md
+AGENTS.md
+docs/*.md
+!docs/CONTRACTS.md
+!docs/ENGINE_HANDOFF.md
+!docs/STORAGE_HANDOFF.md
+docs/*.json
+docs/*.svg

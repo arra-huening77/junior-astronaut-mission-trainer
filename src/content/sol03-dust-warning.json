@@ -1,0 +1,14 @@
+{
+  "dust_storm.narration.1": "Commander, I see a big orange cloud far away. It’s a dust storm, and it will reach us tomorrow.",
+  "dust_storm.narration.2": "Dust blocks sunlight, so our solar panels will make less power. We have one sol to get ready!",
+  "dust_storm.dialogue.1": "We can cover the panels, or save energy now.",
+  "dust_storm.dialogue.2": "Mars storms can last for days. Let’s be ready!",
+  "dust_storm.question": "How do we get ready?",
+  "dust_storm.A.label": "Cover the panels (Power −10 now, storm costs only Power −5)",
+  "dust_storm.A.after": "Smart! The covers keep dust off the panels. We spent power today so we lose less tomorrow.",
+  "dust_storm.B.label": "Switch off the lab to save energy (Power +5 now, storm costs Power −10, no science)",
+  "dust_storm.B.after": "We saved some energy by pausing experiments. Science will have to wait for sunnier days.",
+  "dust_storm.C.label": "Carry on as normal (Science +1, storm costs Power −15)",
+  "dust_storm.C.after": "We got extra science today, but the storm will cost us more power tomorrow. Planning ahead has a price, and so does skipping it.",
+  "dust_storm.classroom": "Why spend power before a storm?"
+}

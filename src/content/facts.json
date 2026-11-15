@@ -1,0 +1,134 @@
+{
+  "F001": {
+    "text": "Gale Crater is a giant bowl on Mars about 154 km (96 miles) wide!",
+    "sourceUrl": "https://mars.nasa.gov/msl/mission/science/gale-crater/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F002": {
+    "text": "Mount Sharp is a huge mountain in the middle of Gale Crater, standing 5 km (3 miles) tall!",
+    "sourceUrl": "https://mars.nasa.gov/msl/mission/science/gale-crater/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F003": {
+    "text": "NASA's Curiosity rover safely landed inside Gale Crater in August 2012.",
+    "sourceUrl": "https://mars.nasa.gov/msl/mission/overview/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F004": {
+    "text": "Mars has two tiny moons named Phobos and Deimos.",
+    "sourceUrl": "https://science.nasa.gov/mars/moons/",
+    "sourceLabel": "NASA Science",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F005": {
+    "text": "Curiosity uses a weather station to measure how cold the Martian ground gets.",
+    "sourceUrl": "https://mars.nasa.gov/msl/weather/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F006": {
+    "text": "Curiosity stays warm on cold nights using heat from its own special nuclear battery!",
+    "sourceUrl": "https://mars.nasa.gov/msl/spacecraft/rover/power/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F007": {
+    "text": "In Gale Crater, Curiosity measured nighttime ground temperatures dropping to -72°C (-98°F).",
+    "sourceUrl": "https://mars.nasa.gov/msl/weather/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F008": {
+    "text": "In 2018, a giant dust storm covered the entire planet of Mars!",
+    "sourceUrl": "https://mars.nasa.gov/news/8348/opportunity-hunkers-down-during-dust-storm/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F009": {
+    "text": "The 2018 storm blocked out the Sun, so the solar-powered Opportunity rover couldn't get enough energy.",
+    "sourceUrl": "https://mars.nasa.gov/mer/mission/rover-status/opportunity/2018/all/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F010": {
+    "text": "Martian dirt has a little bit of water trapped inside it—about two pints of water in every cubic foot of dirt!",
+    "sourceUrl": "https://www.nasa.gov/news-release/nasas-curiosity-rover-finds-water-in-martian-soil/",
+    "sourceLabel": "NASA Main Website",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F011": {
+    "text": "Because Mars is so far away, a message takes anywhere from 3 to 22 minutes to reach Earth.",
+    "sourceUrl": "https://mars.nasa.gov/mars2020/spacecraft/rover/communications/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F012": {
+    "text": "A message between Earth and Mars can take about 3 to 22 minutes to travel one way.",
+    "sourceUrl": "https://mars.nasa.gov/mars2020/spacecraft/rover/communications/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F013": {
+    "text": "Rovers have to drive themselves safely because remote control from Earth is too slow!",
+    "sourceUrl": "https://mars.nasa.gov/msl/mission/communications/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F014": {
+    "text": "NOAA and NASA scientists watch the Sun every single day to keep astronauts safe from space weather.",
+    "sourceUrl": "https://www.swpc.noaa.gov/",
+    "sourceLabel": "NOAA/NWS Space Weather Prediction Center",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F015": {
+    "text": "Solar flares are rated by letters like C (small), M (medium), and X (giant!).",
+    "sourceUrl": "https://spaceplace.nasa.gov/solar-activity/en/",
+    "sourceLabel": "NASA Space Place",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F016": {
+    "text": "Space weather sensors recorded a huge X5.1-class solar flare in November 2025!",
+    "sourceUrl": "https://www.swpc.noaa.gov/news/veterans-day-fireworks-x51-flare-r3-strong-region-4274",
+    "sourceLabel": "NOAA Space Weather Prediction Center",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F017": {
+    "text": "Curiosity has a special tool that has been measuring invisible space radiation since it landed.",
+    "sourceUrl": "https://mars.nasa.gov/msl/spacecraft/instruments/rad/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F018": {
+    "text": "Just like Earth, Mars can have beautiful glowing auroras in the sky during solar storms!",
+    "sourceUrl": "https://mars.nasa.gov/news/nasa-missions-see-auroras-on-mars/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F019": {
+    "text": "Mars rocks are sharp! Curiosity's wheels got little holes in them, so NASA had to drive it carefully.",
+    "sourceUrl": "https://mars.nasa.gov/msl/spacecraft/rover/wheels/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F020": {
+    "text": "The International Space Station uses tools like a robotic sniffer to help find tiny leaks!",
+    "sourceUrl": "https://www.nasa.gov/isam/robotic-external-leak-locator/",
+    "sourceLabel": "NASA ISAM",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F021": {
+    "text": "Mars has very thin air, so small space rocks can easily reach the ground and make fresh craters!",
+    "sourceUrl": "https://mars.nasa.gov/mro/mission/instruments/hirise/",
+    "sourceLabel": "NASA Mars Exploration",
+    "reviewedOn": "Nov 14, 2026"
+  },
+  "F022": {
+    "text": "NASA is practicing on the Moon right now so humans can safely explore Mars in the future.",
+    "sourceUrl": "https://www.nasa.gov/specials/artemis/",
+    "sourceLabel": "NASA Artemis Page",
+    "reviewedOn": "Nov 14, 2026"
+  }
+}

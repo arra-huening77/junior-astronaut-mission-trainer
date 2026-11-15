@@ -1,0 +1,80 @@
+[
+  {
+    "id": "solar_extra",
+    "labelKey": "cargo.solar_extra.label",
+    "hintKey": "cargo.solar_extra.hint",
+    "iconPath": "/assets/cargo/solar_extra.png",
+    "weight": 3,
+    "modifiers": {
+      "solarGain": 3
+    }
+  },
+  {
+    "id": "batteries",
+    "labelKey": "cargo.batteries.label",
+    "hintKey": "cargo.batteries.hint",
+    "iconPath": "/assets/cargo/batteries.png",
+    "weight": 2,
+    "modifiers": {
+      "baseLoad": -3
+    }
+  },
+  {
+    "id": "shield_plating",
+    "labelKey": "cargo.shield_plating.label",
+    "hintKey": "cargo.shield_plating.hint",
+    "iconPath": "/assets/cargo/shield_plating.png",
+    "weight": 3,
+    "modifiers": {
+      "startBonus": {
+        "shield": 20
+      }
+    }
+  },
+  {
+    "id": "greenhouse_kit",
+    "labelKey": "cargo.greenhouse_kit.label",
+    "hintKey": "cargo.greenhouse_kit.hint",
+    "iconPath": "/assets/cargo/greenhouse_kit.png",
+    "weight": 3,
+    "modifiers": {
+      "lifeUpkeep": -2
+    }
+  },
+  {
+    "id": "water_recycler",
+    "labelKey": "cargo.water_recycler.label",
+    "hintKey": "cargo.water_recycler.hint",
+    "iconPath": "/assets/cargo/water_recycler.png",
+    "weight": 2,
+    "modifiers": {
+      "startBonus": {
+        "life": 10
+      }
+    }
+  },
+  {
+    "id": "spare_parts",
+    "labelKey": "cargo.spare_parts.label",
+    "hintKey": "cargo.spare_parts.hint",
+    "iconPath": "/assets/cargo/spare_parts.png",
+    "weight": 1,
+    "modifiers": {}
+  },
+  {
+    "id": "rover_fuel",
+    "labelKey": "cargo.rover_fuel.label",
+    "hintKey": "cargo.rover_fuel.hint",
+    "iconPath": "/assets/cargo/rover_fuel.png",
+    "weight": 2,
+    "modifiers": {}
+  },
+  {
+    "id": "radio_booster",
+    "labelKey": "cargo.radio_booster.label",
+    "hintKey": "cargo.radio_booster.hint",
+    "iconPath": "/assets/cargo/radio_booster.png",
+    "weight": 1,
+    "modifiers": {}
+  }
+]

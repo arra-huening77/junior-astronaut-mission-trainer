@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1800" viewBox="0 0 1560 1800" role="img" aria-labelledby="title desc">
+<title id="title">Mars Mission Survival: team implementation workflow</title>
+<desc id="desc">Bootstrap and contracts lead to four parallel lanes. Engine and frontend integrate Sol 1, then remaining scenes and mini-games expand while backend work continues. Album, Teacher Pack and report can begin as interfaces stabilize. Complete mission passes joint testing before deployment and submission.</desc>
+<rect width="1560" height="1800" fill="#101925"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L9 5 L0 10" fill="#8298b0"/></marker></defs>
+<text x="36" y="52" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">MARS MISSION SURVIVAL</text>
+<text x="36" y="83" fill="#b2bfd0" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Four people, separate AI tasks, one integrated game. Planning only; code begins when permitted.</text>
+<rect x="420" y="116" width="720" height="100" rx="16" fill="#1b2a3b" stroke="#5fd6bb" stroke-width="2"/>
+<text x="440" y="149" fill="#5fd6bb" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">09:00 PLAN — BOOTSTRAP + CONTRACTS</text>
+<text x="440" y="181" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Member 1: app shell, shared interfaces, file ownership.</text>
+<text x="440" y="207" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Member 3: source research can already proceed.</text>
+<polyline points="780,218 780,246" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="420" y="250" width="720" height="78" rx="16" fill="#1b2a3b" stroke="#ffc36e" stroke-width="2"/>
+<text x="440" y="283" fill="#ffc36e" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">GATE A — APP RUNS; INTERFACES AGREED</text>
+<text x="440" y="315" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Early hosting smoke test runs beside local development.</text>
+<text x="36" y="300" fill="#b2bfd0" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">FIRST PARALLEL WORK LANES</text>
+<polyline points="780,330 780,344 214.5,344 214.5,382" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,330 780,344 591.5,344 591.5,382" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,330 780,344 968.5,344 968.5,382" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,330 780,344 1345.5,344 1345.5,382" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="36" y="386" width="357" height="214" rx="16" fill="#1b2a3b" stroke="#5fd6bb" stroke-width="2"/>
+<text x="56" y="419" fill="#5fd6bb" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">M1 — ENGINE + SOL 1</text>
+<text x="56" y="451" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Codex / this implementation task</text>
+<text x="56" y="477" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Pure rules + scene player</text>
+<text x="56" y="503" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Timeline references content keys</text>
+<text x="56" y="529" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Tests: effects, phases, endings</text>
+<text x="56" y="555" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Owner fixes engine defects.</text>
+<rect x="413" y="386" width="357" height="214" rx="16" fill="#1b2a3b" stroke="#85baff" stroke-width="2"/>
+<text x="433" y="419" fill="#85baff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">M4 — FRONTEND</text>
+<text x="433" y="451" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Cursor / separate checkout</text>
+<text x="433" y="477" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Dialogue, meters, choices</text>
+<text x="433" y="503" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Layers, sprites, walking, camera</text>
+<text x="433" y="529" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Build with agreed preview data.</text>
+<text x="433" y="555" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Help integrate the components.</text>
+<rect x="790" y="386" width="357" height="214" rx="16" fill="#1b2a3b" stroke="#c1a0ff" stroke-width="2"/>
+<text x="810" y="419" fill="#c1a0ff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">M2 — NASA + AI</text>
+<text x="810" y="451" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Separate AI task + checkout</text>
+<text x="810" y="477" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">API functions + browser adapters</text>
+<text x="810" y="503" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Validate, cache, time out, fall</text>
+<text x="810" y="529" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">back</text>
+<text x="810" y="555" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Test without the game UI.</text>
+<text x="810" y="581" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Keep owning service problems.</text>
+<rect x="1167" y="386" width="357" height="214" rx="16" fill="#1b2a3b" stroke="#ffd482" stroke-width="2"/>
+<text x="1187" y="419" fill="#ffd482" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">M3 — CONTENT</text>
+<text x="1187" y="451" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Research + independent AI task</text>
+<text x="1187" y="477" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Facts, URLs, dates, units</text>
+<text x="1187" y="503" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Real photos, captions, credits</text>
+<text x="1187" y="529" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Audio inventory + available files</text>
+<text x="1187" y="555" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Verify Sol 1, then work ahead.</text>
+<polyline points="214.5,602 214.5,630 450,630 450,666" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="591.5,602 591.5,666" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="1345.5,602 1345.5,630 1190,630 1190,666" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="270" y="670" width="1020" height="106" rx="16" fill="#1b2a3b" stroke="#ffc36e" stroke-width="2"/>
+<text x="290" y="703" fill="#ffc36e" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">GATE B — PLAY SOL 1 END TO END</text>
+<text x="290" y="735" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">M1 + M4 integrate; M3 verifies facts. Review all choices, portraits, walking, results and night.</text>
+<text x="290" y="761" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">The backend does not have to be complete. Stabilize the scene format before expanding.</text>
+<polyline points="968.5,602 1518,620 1518,834 1315,834 1315,864" fill="none" stroke="#8298b0" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+<text x="1260" y="804" fill="#c1a0ff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400">Backend continues</text>
+<text x="36" y="829" fill="#b2bfd0" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">EXPANSION — TASKS CAN LAND IN SMALL REVIEWED PIECES</text>
+<polyline points="780,778 780,848 267,848 267,864" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,778 780,848 780,848 780,864" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,778 780,848 1293,848 1293,864" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="36" y="868" width="462" height="184" rx="16" fill="#1b2a3b" stroke="#5fd6bb" stroke-width="2"/>
+<text x="56" y="901" fill="#5fd6bb" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">M1 + M3 — REMAINING SOLS</text>
+<text x="56" y="933" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">One file per sol; sourced content as you go.</text>
+<text x="56" y="959" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Sol 6: three versions. Sol 8: two branches.</text>
+<text x="56" y="985" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">M1: engine, saves, Plan and integration.</text>
+<text x="56" y="1011" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">M3: facts/copy; claim any delegated file.</text>
+<rect x="549" y="868" width="462" height="184" rx="16" fill="#1b2a3b" stroke="#85baff" stroke-width="2"/>
+<text x="569" y="901" fill="#85baff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">M2 + M4 — FOUR MINI-GAMES</text>
+<text x="569" y="933" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Separate component files and task branches.</text>
+<text x="569" y="959" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">One agreed done / skipped result contract.</text>
+<text x="569" y="985" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Rover obstacles + non-blocking fallback.</text>
+<text x="569" y="1011" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">No timer; engine applies the bonus once.</text>
+<rect x="1062" y="868" width="462" height="184" rx="16" fill="#1b2a3b" stroke="#c1a0ff" stroke-width="2"/>
+<text x="1082" y="901" fill="#c1a0ff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">M1 + M2 — CONNECT SERVICES</text>
+<text x="1082" y="933" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">M1 wires the app; M2 owns adapters/API.</text>
+<text x="1082" y="959" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Freeze NASA input before Plan.</text>
+<text x="1082" y="985" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Continue keeps the original snapshot.</text>
+<text x="1082" y="1011" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">AI deadline: client 3s; server 8s.</text>
+<rect x="180" y="1094" width="1200" height="110" rx="16" fill="#1b2a3b" stroke="#5fd6bb" stroke-width="2"/>
+<text x="200" y="1127" fill="#5fd6bb" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">ALONGSIDE EXPANSION — START WHEN EACH INTERFACE IS STABLE</text>
+<text x="200" y="1159" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Album: M2 + M3 content. Teacher/print UI: M4 + M3 content. Report/fallbacks: M1 + M2.</text>
+<text x="200" y="1185" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Owners may swap after a handoff. Slides outline and video storyboard can start before the final build.</text>
+<polyline points="267,1054 267,1072 780,1072 780,1090" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,1054 780,1072 780,1072 780,1090" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="1293,1054 1293,1072 780,1072 780,1090" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,1206 780,1236" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="270" y="1240" width="1020" height="100" rx="16" fill="#1b2a3b" stroke="#ffc36e" stroke-width="2"/>
+<text x="290" y="1273" fill="#ffc36e" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">GATE C — COMPLETE TEN-SOL MISSION</text>
+<text x="290" y="1305" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">All thirteen prepared versions, mini-games, save/retry, album, report and teacher features.</text>
+<text x="290" y="1331" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Both APIs have verified fallbacks. No drafting markers in the public build.</text>
+<polyline points="780,1342 780,1370" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="270" y="1374" width="1020" height="108" rx="16" fill="#1b2a3b" stroke="#85baff" stroke-width="2"/>
+<text x="290" y="1407" fill="#85baff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">ALL FOUR — JOINT TESTING + OWNER FIXES</text>
+<text x="290" y="1439" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Split scenarios: logic/branches, saves/retry, API failure, touch/keyboard, mobile, print and credits.</text>
+<text x="290" y="1465" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Feature owners troubleshoot their own areas; M1 coordinates cross-feature changes.</text>
+<polyline points="780,1484 780,1518" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="36" y="1522" width="462" height="152" rx="16" fill="#1b2a3b" stroke="#5fd6bb" stroke-width="2"/>
+<text x="56" y="1555" fill="#5fd6bb" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">PUBLISH — M1 / HANDOFF</text>
+<text x="56" y="1587" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Use the early deployment setup.</text>
+<text x="56" y="1613" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Check production keys and real public link.</text>
+<text x="56" y="1639" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Keep feature owners available for fixes.</text>
+<rect x="549" y="1522" width="462" height="152" rx="16" fill="#1b2a3b" stroke="#ffd482" stroke-width="2"/>
+<text x="569" y="1555" fill="#ffd482" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">SLIDES — M3 / HANDOFF</text>
+<text x="569" y="1587" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Explain the tradeoffs and NASA sources.</text>
+<text x="569" y="1613" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Separate real observations from simulation.</text>
+<text x="569" y="1639" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Keep claims aligned with the final build.</text>
+<rect x="1062" y="1522" width="462" height="152" rx="16" fill="#1b2a3b" stroke="#c1a0ff" stroke-width="2"/>
+<text x="1082" y="1555" fill="#c1a0ff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">VIDEO — M2 + M4 / HANDOFF</text>
+<text x="1082" y="1587" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Use the prepared storyboard.</text>
+<text x="1082" y="1613" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Record stable gameplay and actual features.</text>
+<text x="1082" y="1639" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400">Check final rules, playback and links.</text>
+<polyline points="780,1484 780,1500 267,1500 267,1518" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,1484 780,1500 780,1500 780,1518" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="780,1484 780,1500 1293,1500 1293,1518" fill="none" stroke="#8298b0" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="36" y="1723" fill="#e7eef7" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">COLLISION RULE: one owner per file; separate checkouts; shared contracts change once through M1.</text>
+<text x="36" y="1756" fill="#b2bfd0" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400">Solid arrows: dependency checkpoint. Dashed arrow: work continues independently. No fixed completion times promised.</text>
+</svg>

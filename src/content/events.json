@@ -1,0 +1,539 @@
+[
+  {
+    "id": "touchdown",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "touchdown.A.label",
+        "afterKey": "touchdown.A.after",
+        "effects": {
+          "life": 5,
+          "power": -5
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "touchdown.B.label",
+        "afterKey": "touchdown.B.after",
+        "effects": {
+          "shield": 5,
+          "power": -5
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "touchdown.C.label",
+        "afterKey": "touchdown.C.after",
+        "effects": {
+          "life": 3,
+          "power": -8
+        }
+      }
+    ]
+  },
+  {
+    "id": "first_night",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "first_night.A.label",
+        "afterKey": "first_night.A.after",
+        "effects": {
+          "power": -15,
+          "life": 2
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "first_night.B.label",
+        "afterKey": "first_night.B.after",
+        "effects": {
+          "power": -8,
+          "life": -2
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "first_night.C.label",
+        "afterKey": "first_night.C.after",
+        "effects": {
+          "power": -4,
+          "life": -5
+        }
+      }
+    ]
+  },
+  {
+    "id": "dust_storm",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "dust_storm.A.label",
+        "afterKey": "dust_storm.A.after",
+        "effects": {
+          "power": -10,
+          "pending": {
+            "solsLater": 1,
+            "effects": {
+              "power": -5
+            }
+          }
+        },
+        "miniGame": {
+          "id": "cover_panels",
+          "bonus": {
+            "power": 2
+          }
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "dust_storm.B.label",
+        "afterKey": "dust_storm.B.after",
+        "effects": {
+          "power": 5,
+          "noScience": true,
+          "pending": {
+            "solsLater": 1,
+            "effects": {
+              "power": -10
+            }
+          }
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "dust_storm.C.label",
+        "afterKey": "dust_storm.C.after",
+        "effects": {
+          "science": 1,
+          "pending": {
+            "solsLater": 1,
+            "effects": {
+              "power": -15
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ice_hunt",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "ice_hunt.A.label",
+        "afterKey": "ice_hunt.A.after",
+        "effects": {
+          "life": 8,
+          "power": -5
+        },
+        "miniGame": {
+          "id": "rover_drive",
+          "bonus": {
+            "life": 2
+          }
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "ice_hunt.B.label",
+        "afterKey": "ice_hunt.B.after",
+        "effects": {
+          "life": 18,
+          "power": -15,
+          "shield": -5
+        },
+        "miniGame": {
+          "id": "rover_drive",
+          "bonus": {
+            "life": 2
+          }
+        },
+        "ifCargo": {
+          "rover_fuel": {
+            "power": 5
+          }
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "ice_hunt.C.label",
+        "afterKey": "ice_hunt.C.after",
+        "effects": {
+          "life": -3
+        }
+      }
+    ]
+  },
+  {
+    "id": "calling_earth",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "calling_earth.A.label",
+        "afterKey": "calling_earth.A.after",
+        "effects": {
+          "power": -3
+        },
+        "ifCargo": {
+          "radio_booster": {
+            "power": 3
+          }
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "calling_earth.B.label",
+        "afterKey": "calling_earth.B.after",
+        "effects": {
+          "power": -10
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "calling_earth.C.label",
+        "afterKey": "calling_earth.C.after",
+        "effects": {
+          "science": 2,
+          "setFlags": ["ignoredFlicker"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "solar_storm",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "solar_storm.A.label",
+        "afterKey": "solar_storm.A.after",
+        "effects": {
+          "power": -15,
+          "shield": 20
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "solar_storm.B.label",
+        "afterKey": "solar_storm.B.after",
+        "effects": {
+          "power": -5,
+          "shield": 10,
+          "noScience": true
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "solar_storm.C.label",
+        "afterKey": "solar_storm.C.after",
+        "effects": {
+          "science": 2,
+          "shield": -20
+        }
+      }
+    ],
+    "variants": {
+      "calm": {
+        "choices": [
+          {
+            "id": "A",
+            "labelKey": "solar_storm.calm.A.label",
+            "afterKey": "solar_storm.calm.A.after",
+            "effects": {
+              "power": -4,
+              "shield": 6
+            }
+          },
+          {
+            "id": "B",
+            "labelKey": "solar_storm.calm.B.label",
+            "afterKey": "solar_storm.calm.B.after",
+            "effects": {
+              "power": -2,
+              "shield": 3,
+              "noScience": true
+            }
+          },
+          {
+            "id": "C",
+            "labelKey": "solar_storm.calm.C.label",
+            "afterKey": "solar_storm.calm.C.after",
+            "effects": {
+              "science": 2,
+              "shield": -4
+            }
+          }
+        ]
+      },
+      "active": {
+        "choices": [
+          {
+            "id": "A",
+            "labelKey": "solar_storm.active.A.label",
+            "afterKey": "solar_storm.active.A.after",
+            "effects": {
+              "power": -10,
+              "shield": 14
+            }
+          },
+          {
+            "id": "B",
+            "labelKey": "solar_storm.active.B.label",
+            "afterKey": "solar_storm.active.B.after",
+            "effects": {
+              "power": -4,
+              "shield": 7,
+              "noScience": true
+            }
+          },
+          {
+            "id": "C",
+            "labelKey": "solar_storm.active.C.label",
+            "afterKey": "solar_storm.active.C.after",
+            "effects": {
+              "science": 2,
+              "shield": -10
+            }
+          }
+        ]
+      },
+      "stormy": {
+        "choices": [
+          {
+            "id": "A",
+            "labelKey": "solar_storm.stormy.A.label",
+            "afterKey": "solar_storm.stormy.A.after",
+            "effects": {
+              "power": -15,
+              "shield": 20
+            }
+          },
+          {
+            "id": "B",
+            "labelKey": "solar_storm.stormy.B.label",
+            "afterKey": "solar_storm.stormy.B.after",
+            "effects": {
+              "power": -5,
+              "shield": 10,
+              "noScience": true
+            }
+          },
+          {
+            "id": "C",
+            "labelKey": "solar_storm.stormy.C.label",
+            "afterKey": "solar_storm.stormy.C.after",
+            "effects": {
+              "science": 2,
+              "shield": -20
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "equipment_failure",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "equipment_failure.A.label",
+        "afterKey": "equipment_failure.A.after",
+        "effects": {
+          "power": -15
+        },
+        "miniGame": {
+          "id": "repair_wires",
+          "bonus": {
+            "power": 2
+          }
+        },
+        "ifCargo": {
+          "spare_parts": {
+            "power": 5
+          }
+        },
+        "ifFlags": {
+          "ignoredFlicker": {
+            "power": -5
+          }
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "equipment_failure.B.label",
+        "afterKey": "equipment_failure.B.after",
+        "effects": {
+          "power": -6,
+          "setFlags": ["quickPatch"]
+        },
+        "ifCargo": {
+          "spare_parts": {
+            "power": 5
+          }
+        },
+        "ifFlags": {
+          "ignoredFlicker": {
+            "power": -5
+          }
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "equipment_failure.C.label",
+        "afterKey": "equipment_failure.C.after",
+        "effects": {
+          "power": -8,
+          "solarPenalty": 5
+        },
+        "ifCargo": {
+          "spare_parts": {
+            "power": 5
+          }
+        },
+        "ifFlags": {
+          "ignoredFlicker": {
+            "power": -5
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "leak",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "leak.A.label",
+        "afterKey": "leak.A.after",
+        "effects": {
+          "power": -10
+        },
+        "miniGame": {
+          "id": "patch_leak",
+          "bonus": {
+            "power": 2
+          }
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "leak.B.label",
+        "afterKey": "leak.B.after",
+        "effects": {
+          "life": 10,
+          "power": -3,
+          "setFlags": ["usedBackupO2"]
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "leak.C.label",
+        "afterKey": "leak.C.after",
+        "effects": {
+          "life": 3,
+          "noScience": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "meteors",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "meteors.A.label",
+        "afterKey": "meteors.A.after",
+        "effects": {
+          "noScience": true
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "meteors.B.label",
+        "afterKey": "meteors.B.after",
+        "effects": {
+          "power": -10,
+          "shield": 10
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "meteors.C.label",
+        "afterKey": "meteors.C.after",
+        "effects": {
+          "science": 1,
+          "life": -5
+        }
+      }
+    ]
+  },
+  {
+    "id": "cold_night",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "cold_night.A.label",
+        "afterKey": "cold_night.A.after",
+        "effects": {
+          "power": -18,
+          "life": 3
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "cold_night.B.label",
+        "afterKey": "cold_night.B.after",
+        "effects": {
+          "power": -10,
+          "noScience": true
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "cold_night.C.label",
+        "afterKey": "cold_night.C.after",
+        "effects": {
+          "power": -5,
+          "life": -5,
+          "setFlags": ["plantsSuffered"]
+        }
+      }
+    ]
+  },
+  {
+    "id": "finale",
+    "choices": [
+      {
+        "id": "A",
+        "labelKey": "finale.A.label",
+        "afterKey": "finale.A.after",
+        "effects": {
+          "life": -4,
+          "power": -8,
+          "shield": -4
+        }
+      },
+      {
+        "id": "B",
+        "labelKey": "finale.B.label",
+        "afterKey": "finale.B.after",
+        "effects": {
+          "life": 0,
+          "power": -10,
+          "shield": -8
+        }
+      },
+      {
+        "id": "C",
+        "labelKey": "finale.C.label",
+        "afterKey": "finale.C.after",
+        "effects": {
+          "life": -8,
+          "power": -10,
+          "shield": 0
+        }
+      }
+    ]
+  }
+]

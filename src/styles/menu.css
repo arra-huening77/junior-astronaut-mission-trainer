@@ -1,0 +1,680 @@
+/* Title / Learn / Sources / Settings — Member 4
+   Orbitron display + Nunito body; glass cyan shine CTAs. */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Nunito:wght@600;700;800&display=swap');
+
+.title-shell,
+.menu-shell {
+  --menu-navy: #15244f;
+  --menu-cyan: #00d2ff;
+  --menu-gold: #ffb800;
+  --menu-title: #ffe566;
+  --menu-ink: #142033;
+  --menu-paper: #fff8ef;
+  --menu-cta: #f5c42e;
+  --menu-cta-ink: #2a1a00;
+  --menu-shine: rgba(126, 200, 255, 0.85);
+  min-height: 100vh;
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+  color: var(--menu-ink);
+}
+
+/* Split-screen title: solid Mars left (~48%), menu content right. */
+.title-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: stretch;
+  min-height: 100vh;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.title-hero {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.title-hero__space {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 18% 48%,
+      rgba(180, 70, 30, 0.2),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 78% 36%,
+      rgba(40, 70, 140, 0.22),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 55% 80%,
+      rgba(80, 40, 90, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 62%, #cfe8ff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 48% 12%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 66% 44%, #ffe9b8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 82% 72%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 91% 22%, #d7f0ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 8% 88%, #fff 50%, transparent 51%),
+    linear-gradient(180deg, #000 0%, #050814 55%, #070b14 100%);
+}
+
+/* Full solid planet — nudged toward center to sit closer to the menu text. */
+.title-mars {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  width: min(50vw, 90vh);
+  height: min(50vw, 90vh);
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  opacity: 1;
+}
+
+.title-mars:active {
+  cursor: grabbing;
+}
+
+.title-mars canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/* Soft veil on the right only — never fades Mars. */
+.title-hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 46%,
+      rgba(8, 12, 28, 0.18) 62%,
+      rgba(8, 12, 28, 0.42) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 12, 28, 0.12) 0%,
+      transparent 40%,
+      rgba(8, 12, 28, 0.35) 100%
+    );
+}
+
+.title-panel {
+  position: relative;
+  z-index: 3;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 0 0;
+  padding: clamp(1.25rem, 4vh, 2.5rem) clamp(0.75rem, 2.5vw, 1.5rem)
+    clamp(1.25rem, 4vh, 2.5rem) 0;
+  color: #eaf7ff;
+  text-align: center;
+  pointer-events: none;
+  transform: translateX(-6%);
+}
+
+.title-panel .title-actions,
+.title-panel .title-sky,
+.title-panel .title-logo,
+.title-panel button {
+  pointer-events: auto;
+}
+
+.title-logo {
+  display: block;
+  width: clamp(140px, 18vw, 210px);
+  height: auto;
+  margin: 0 auto 0.35rem;
+  filter: drop-shadow(0 8px 16px rgba(8, 12, 28, 0.45));
+}
+
+.title-brand {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.02em;
+  font-family: 'Orbitron', 'Nunito', sans-serif;
+  font-size: clamp(2.35rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f7fbff;
+  text-shadow:
+    0 0 8px rgba(126, 200, 255, 0.95),
+    0 0 22px rgba(80, 170, 255, 0.75),
+    0 0 48px rgba(60, 140, 255, 0.45),
+    0 2px 0 rgba(0, 40, 80, 0.35);
+}
+
+.title-brand__line {
+  display: block;
+}
+
+.title-subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 1.45rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 180, 255, 0.65);
+  background: rgba(8, 16, 40, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #f0f6ff;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(0.92rem, 1.8vw, 1.12rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  box-shadow:
+    0 0 14px rgba(80, 160, 255, 0.35),
+    0 0 28px rgba(60, 140, 255, 0.18),
+    inset 0 0 12px rgba(120, 180, 255, 0.08);
+}
+
+.title-sky {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+}
+
+.title-actions {
+  display: grid;
+  gap: 0.85rem;
+  width: min(360px, 100%);
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .title-shell {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .title-mars {
+    left: 4%;
+    width: min(52vw, 72vh);
+    height: min(52vw, 72vh);
+    opacity: 1;
+  }
+
+  .title-panel {
+    transform: translateX(-4%);
+  }
+}
+
+@media (max-width: 720px) {
+  .title-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(240px, 38vh) auto;
+  }
+
+  .title-mars {
+    left: 50%;
+    top: 19vh;
+    width: min(70vw, 34vh);
+    height: min(70vw, 34vh);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  .title-panel {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 440px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    transform: none;
+  }
+}
+
+/* Transparent glass CTAs with cyan shine — primary keeps a warmer rim. */
+.title-btn {
+  position: relative;
+  min-height: 54px;
+  padding: 12px 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 180, 255, 0.7);
+  background: rgba(8, 16, 40, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 16px rgba(80, 160, 255, 0.35),
+    0 0 32px rgba(60, 140, 255, 0.18),
+    inset 0 0 18px rgba(120, 180, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: #f0f6ff;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.title-btn--primary {
+  border-color: rgba(255, 210, 120, 0.75);
+  background: rgba(245, 196, 46, 0.16);
+  box-shadow:
+    0 0 18px rgba(255, 184, 0, 0.35),
+    0 0 34px rgba(255, 160, 40, 0.18),
+    inset 0 0 16px rgba(255, 220, 140, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  color: #fff6d8;
+}
+
+.title-btn::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: inherit;
+  border: 1px solid rgba(160, 210, 255, 0.35);
+  pointer-events: none;
+  box-shadow: inset 0 0 12px rgba(120, 180, 255, 0.12);
+}
+
+.title-btn--primary::before {
+  border-color: rgba(255, 230, 160, 0.45);
+  box-shadow: inset 0 0 12px rgba(255, 200, 80, 0.15);
+}
+
+.title-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(180, 220, 255, 0.22) 45%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  transition: left 0.55s ease;
+}
+
+.title-btn:hover:not(:disabled)::after,
+.title-btn:focus-visible:not(:disabled)::after {
+  left: 120%;
+}
+
+.title-btn:hover:not(:disabled),
+.title-btn:focus-visible:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: rgba(160, 210, 255, 0.95);
+  background: rgba(12, 28, 64, 0.42);
+  box-shadow:
+    0 0 22px rgba(100, 180, 255, 0.5),
+    0 0 40px rgba(80, 160, 255, 0.28),
+    inset 0 0 20px rgba(140, 200, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.title-btn--primary:hover:not(:disabled),
+.title-btn--primary:focus-visible:not(:disabled) {
+  border-color: rgba(255, 230, 150, 0.95);
+  background: rgba(245, 196, 46, 0.28);
+  box-shadow:
+    0 0 24px rgba(255, 190, 60, 0.5),
+    0 0 42px rgba(255, 160, 40, 0.28),
+    inset 0 0 18px rgba(255, 220, 140, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.title-btn:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.3);
+  border-color: rgba(120, 180, 255, 0.25);
+  box-shadow: 0 0 10px rgba(80, 160, 255, 0.12);
+  background: rgba(8, 16, 40, 0.2);
+}
+
+.title-btn:disabled .title-btn__label,
+.title-btn:disabled .title-btn__sparkle {
+  opacity: 0.45;
+}
+
+.title-btn__sparkle {
+  position: absolute;
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  color: rgba(160, 210, 255, 0.9);
+  filter: drop-shadow(0 0 6px rgba(100, 180, 255, 0.7));
+}
+
+.title-btn--primary .title-btn__sparkle {
+  color: rgba(255, 230, 160, 0.95);
+  filter: drop-shadow(0 0 6px rgba(255, 190, 80, 0.7));
+}
+
+.title-btn__sparkle--tl {
+  top: 12px;
+  left: 17px;
+}
+
+.title-btn__sparkle--br {
+  bottom: 12px;
+  right: 17px;
+}
+
+.title-btn__label {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.title-btn:focus-visible {
+  outline: 3px solid #7ec8ff;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .title-btn {
+    transition: none;
+  }
+  .title-btn:hover:not(:disabled),
+  .title-btn:focus-visible:not(:disabled) {
+    transform: none;
+  }
+}
+
+.title-modal {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(8, 12, 24, 0.55);
+}
+
+.title-modal__card {
+  width: min(420px, 100%);
+  padding: 1.1rem;
+  border-radius: 18px;
+  background: var(--menu-paper);
+  border: 2px solid rgba(0, 210, 255, 0.45);
+  color: var(--menu-ink);
+  text-align: left;
+  font-family: inherit;
+}
+
+.title-modal__card h2 {
+  margin: 0 0 0.4rem;
+  color: var(--menu-navy);
+  font-family: inherit;
+  font-weight: 800;
+}
+
+.title-modal__card p {
+  margin: 0 0 0.85rem;
+}
+
+.title-modal__actions {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.menu-shell {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 12, 28, 0.35) 0%,
+      rgba(8, 12, 28, 0.55) 55%,
+      rgba(8, 12, 28, 0.72) 100%
+    ),
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(0, 210, 255, 0.12),
+      transparent 40%
+    ),
+    url('/assets/bg/menu_vista.jpg') center 60% / cover no-repeat;
+}
+
+.menu-frame {
+  width: min(720px, 100%);
+  max-height: min(90vh, 820px);
+  overflow: auto;
+  padding: 1rem 1.1rem 1.2rem;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #243988, #15244f);
+  border: 4px solid #0d1638;
+  box-shadow:
+    0 0 0 3px rgba(0, 210, 255, 0.35),
+    0 22px 48px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 2px rgba(0, 210, 255, 0.35);
+  color: #eaf7ff;
+}
+
+.menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.menu-top h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+}
+
+.menu-close {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--menu-cyan);
+  background: linear-gradient(180deg, #3aa0ef, #1d5fbf);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #143f7a;
+}
+
+.menu-lead {
+  margin: 0 0 0.85rem;
+  opacity: 0.92;
+}
+
+.menu-card {
+  margin-bottom: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 248, 239, 0.97);
+  color: var(--menu-ink);
+  border: 2px solid rgba(0, 210, 255, 0.28);
+  font-family: inherit;
+}
+
+.menu-card h2 {
+  margin: 0 0 0.55rem;
+  color: var(--menu-navy);
+  font-size: 1.05rem;
+  font-family: inherit;
+  font-weight: 800;
+}
+
+.menu-note {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.35;
+}
+
+.menu-note--status {
+  padding: 0.55rem 0.7rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.learn-list {
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.learn-item {
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 248, 239, 0.97);
+  color: var(--menu-ink);
+  border: 2px solid rgba(0, 210, 255, 0.28);
+  font-family: inherit;
+}
+
+.learn-item dt {
+  font-weight: 800;
+  color: var(--menu-navy);
+  margin-bottom: 0.25rem;
+}
+
+.learn-item dd {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.sources-list,
+.credits-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.sources-list li {
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(20, 32, 51, 0.12);
+}
+
+.sources-list li:last-child,
+.credits-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sources-list__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sources-list p {
+  margin: 0.3rem 0;
+  color: #4a5568;
+  font-size: 0.92rem;
+}
+
+.sources-list a {
+  color: #1d5fbf;
+  font-weight: 700;
+}
+
+.sources-pill {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: #e8f4ff;
+  border: 1px solid rgba(26, 43, 109, 0.2);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--menu-navy);
+}
+
+.sources-pill--photo {
+  background: #fff4cc;
+  border-color: rgba(255, 184, 0, 0.45);
+}
+
+.credits-list li {
+  line-height: 1.35;
+}
+
+.settings-list {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 248, 239, 0.97);
+  color: var(--menu-ink);
+  border: 2px solid rgba(0, 210, 255, 0.28);
+  font-family: inherit;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 44px;
+  font-weight: 700;
+}
+
+.settings-row input[type='checkbox'] {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.settings-row select {
+  min-height: 40px;
+  border-radius: 10px;
+  border: 2px solid rgba(26, 43, 109, 0.2);
+  padding: 0.35rem 0.55rem;
+  font: inherit;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .title-panel {
+    width: 100%;
+  }
+}
+/* The menu remains usable on devices without WebGL. */
+.title-mars--fallback {
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 25%, #ffffff15, #0009 85%),
+    url('/assets/bg/mars_globe.jpg') center / cover;
+  box-shadow:
+    inset -25px -15px 50px #0009,
+    0 0 45px #e2794d33;
+}

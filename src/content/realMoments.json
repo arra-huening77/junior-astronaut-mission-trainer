@@ -1,0 +1,85 @@
+{
+  "rm_gale": {
+    "factId": "F001",
+    "photoId": "sol1-gale-crater",
+    "eventId": "touchdown",
+    "title": "Gale Crater"
+  },
+  "rm_moons_night": {
+    "factId": "F004",
+    "photoId": "sol2-mars-night",
+    "eventId": "first_night",
+    "title": "Night on Mars",
+    "contextNote": "The photograph shows sunset, not the two moons mentioned in the fact."
+  },
+  "rm_dust_2018": {
+    "factId": "F008",
+    "photoId": "sol3-dust-devil",
+    "eventId": "dust_storm",
+    "title": "Dust on Mars",
+    "contextNote": "The photo shows a local dust devil. The 2018 planet-wide storm described by the fact was a separate event."
+  },
+  "rm_soil_water": {
+    "factId": "F010",
+    "photoId": "sol4-rover-drill",
+    "eventId": "ice_hunt",
+    "title": "Water and Martian soil",
+    "contextNote": "The photo shows drilling, not exposed ice. Nearby ice in the mission is a game simplification."
+  },
+  "rm_signal_delay": {
+    "factId": "F011",
+    "photoId": "sol5-earth-view",
+    "eventId": "calling_earth",
+    "title": "Calling Earth"
+  },
+  "rm_wheels": {
+    "factId": "F019",
+    "photoId": "sol7-worn-wheel",
+    "eventId": "equipment_failure",
+    "title": "Rover maintenance"
+  },
+  "rm_leak": {
+    "factId": "F020",
+    "photoId": "sol8-iss-leak",
+    "eventId": "leak",
+    "title": "Finding leaks in space",
+    "contextNote": "This is space-station leak detection, not our fictional Mars air leak. RELL detects ammonia leaks; it does not patch them."
+  },
+  "rm_craters": {
+    "factId": "F021",
+    "photoId": "sol8-fresh-crater",
+    "eventId": "meteors",
+    "title": "Fresh impact craters"
+  },
+  "rm_cold": {
+    "factId": "F007",
+    "photoId": "sol9-mars-frost",
+    "eventId": "cold_night",
+    "title": "Frost on Mars",
+    "contextNote": "The frost image is from Utopia Planitia. Do not label it as the location or time of a Gale Crater temperature measurement."
+  },
+  "rm_artemis": {
+    "factId": "F022",
+    "photoId": "sol10-exploration-future",
+    "eventId": "finale",
+    "title": "Exploring the Moon and Mars"
+  },
+  "rm_solar_event": {
+    "factId": "F014",
+    "photoId": "sol6-solar-flare",
+    "eventId": "solar_storm",
+    "title": "Watching the Sun",
+    "contextNote": "Use the frozen mission snapshot for observed event/class, observation date and source status. The saved photo is separate from that input. Never describe its flare as the current observation.",
+    "variants": {
+      "calm": {
+        "factId": "F014"
+      },
+      "active": {
+        "factId": "F015"
+      },
+      "stormy": {
+        "factId": "F017"
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "F001": {
+    "wording": "Gale Crater is a giant bowl on Mars about 154 km (96 miles) wide!",
+    "sourceUrl": "https://mars.nasa.gov/msl/mission/science/gale-crater/",
+    "sourceLabel": "NASA Mars Exploration · Gale Crater"
+  },
+  "F004": {
+    "wording": "Mars has two tiny moons named Phobos and Deimos.",
+    "sourceUrl": "https://science.nasa.gov/mars/moons/",
+    "sourceLabel": "NASA Science · Mars moons"
+  },
+  "F007": {
+    "wording": "In Gale Crater, Curiosity measured nighttime ground temperatures dropping to -72°C (-98°F).",
+    "sourceUrl": "https://mars.nasa.gov/msl/weather/",
+    "sourceLabel": "NASA Mars Exploration · Weather"
+  },
+  "F008": {
+    "wording": "In 2018, a giant dust storm covered the entire planet of Mars!",
+    "sourceUrl": "https://mars.nasa.gov/news/8348/opportunity-hunkers-down-during-dust-storm/",
+    "sourceLabel": "NASA Mars Exploration · Opportunity"
+  },
+  "F010": {
+    "wording": "Martian dirt has a little bit of water trapped inside it—about two pints of water in every cubic foot of dirt!",
+    "sourceUrl": "https://www.nasa.gov/news-release/nasas-curiosity-rover-finds-water-in-martian-soil/",
+    "sourceLabel": "NASA · Curiosity soil water"
+  },
+  "F011": {
+    "wording": "Because Mars is so far away, a message takes anywhere from 3 to 22 minutes to reach Earth.",
+    "sourceUrl": "https://mars.nasa.gov/mars2020/spacecraft/rover/communications/",
+    "sourceLabel": "NASA · Mars communications"
+  },
+  "F014": {
+    "wording": "NOAA and NASA scientists watch the Sun every single day to keep astronauts safe from space weather.",
+    "sourceUrl": "https://www.swpc.noaa.gov/",
+    "sourceLabel": "NOAA / NASA · Space weather"
+  },
+  "F015": {
+    "wording": "Solar flares are rated by letters like C (small), M (medium), and X (giant!).",
+    "sourceUrl": "https://spaceplace.nasa.gov/solar-activity/en/",
+    "sourceLabel": "NASA Space Place · Solar activity"
+  },
+  "F017": {
+    "wording": "Curiosity has a special tool that has been measuring invisible space radiation since it landed.",
+    "sourceUrl": "https://mars.nasa.gov/msl/spacecraft/instruments/rad/",
+    "sourceLabel": "NASA Mars Exploration · RAD"
+  },
+  "F019": {
+    "wording": "Mars rocks are sharp! Curiosity's wheels got little holes in them, so NASA had to drive it carefully.",
+    "sourceUrl": "https://mars.nasa.gov/msl/spacecraft/rover/wheels/",
+    "sourceLabel": "NASA Mars Exploration · Wheels"
+  },
+  "F020": {
+    "wording": "The International Space Station uses tools like a robotic sniffer to help find tiny leaks!",
+    "sourceUrl": "https://www.nasa.gov/isam/robotic-external-leak-locator/",
+    "sourceLabel": "NASA · Robotic External Leak Locator"
+  },
+  "F021": {
+    "wording": "Mars has very thin air, so small space rocks can easily reach the ground and make fresh craters!",
+    "sourceUrl": "https://mars.nasa.gov/mro/mission/instruments/hirise/",
+    "sourceLabel": "NASA · HiRISE"
+  },
+  "F022": {
+    "wording": "NASA is practicing on the Moon right now so humans can safely explore Mars in the future.",
+    "sourceUrl": "https://www.nasa.gov/specials/artemis/",
+    "sourceLabel": "NASA · Artemis"
+  }
+}

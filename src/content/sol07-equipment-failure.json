@@ -1,0 +1,19 @@
+{
+  "equipment_failure.narration.1": "Crackle! A solar panel is throwing sparks.",
+  "equipment_failure.narration.2": "Machines get tired out here, Commander, and fixing them early is part of the job.",
+  "equipment_failure.narration.flicker": "That flicker from Sol 5 is back, and it’s bigger!",
+  "equipment_failure.dialogue.kai": "Uh-oh, that panel is making sparks! I can fix it, but it takes power and time.",
+  "equipment_failure.dialogue.kai_fixed": "Good as new. Almost!",
+  "equipment_failure.cargo.spare_parts": "Good thing we packed spare parts!",
+  "equipment_failure.question": "How do we fix it?",
+  "equipment_failure.A.label": "Full repair",
+  "equipment_failure.B.label": "Quick patch",
+  "equipment_failure.C.label": "Switch to backup panels",
+  "equipment_failure.A.after": "Good as new! The repair took a lot of power, but now the panel is safe.",
+  "equipment_failure.B.after": "A quick patch saved power, but patches don’t always hold. Let’s keep an eye on it.",
+  "equipment_failure.C.after": "The backup panels work, but they make a little less power from now on.",
+  "equipment_failure.classroom": "What can happen when we delay a repair?",
+  "minigame.repair_wires.hint": "Choose a wire end, then its matching symbol. Connect all three pairs.",
+  "minigame.repair_wires.done": "The wires are connected. You earned a small power bonus.",
+  "minigame.repair_wires.skipped": "No problem. Let's keep going!"
+}

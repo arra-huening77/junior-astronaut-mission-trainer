@@ -1,0 +1,242 @@
+/* Shared scene orchestration, classroom projector layout and safe decorative effects. */
+.mission-night,
+.mission-classroom {
+  position: relative;
+  z-index: 30;
+  margin: 7rem auto 2rem;
+  max-width: 56rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: #f7fbff;
+  color: #142033;
+  border: 2px solid #68cfe6;
+}
+.mission-night {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 25%;
+  margin: 0;
+  text-align: center;
+}
+.mission-tools {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 0.75rem;
+  background: #111e37;
+}
+.mission-tools button,
+.mission-last-report,
+.tn-classroom button {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #8ed8ef;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: #253b6a;
+}
+.mission-status {
+  position: relative;
+  z-index: 50;
+  padding: 1rem;
+  background: #182743;
+  color: #fff;
+}
+.app-caution {
+  position: fixed;
+  z-index: 100;
+  inset: 20% 15% auto;
+  padding: 2rem;
+  background: #142138;
+  color: #fff;
+  border: 3px solid #ffd36a;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 100vmax #0009;
+}
+.app-caution button {
+  min-height: 44px;
+  border: 1px solid currentColor;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.mission-text--lg .ui-dialogue__text,
+.mission-text--lg .ui-narration__text,
+.mission-text--lg .ui-after__text,
+.mission-text--lg .ui-choice {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.mission-text--xl .ui-dialogue__text,
+.mission-text--xl .ui-narration__text,
+.mission-text--xl .ui-after__text,
+.mission-text--xl .ui-choice {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+.app-scene--classroom .ui-game {
+  min-height: 90vh;
+}
+.app-scene--classroom .ui-game__dock {
+  width: min(76rem, 90%);
+}
+.app-scene--classroom .ui-rail {
+  display: none;
+}
+.app-scene--classroom .teacher-pause {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+.ui-overlay.mission-mood--dusk_night,
+.ui-overlay.mission-mood--cold_night,
+.ui-overlay.mission-mood--meteors {
+  background: linear-gradient(#0a123d88, #12355955);
+}
+.ui-overlay.mission-mood--dust_storm,
+.ui-overlay.mission-mood--finale_storm {
+  background: linear-gradient(90deg, #9c532a66, #c1783d88);
+}
+.ui-overlay.mission-mood--solar_storm {
+  background: linear-gradient(#8e45ac66, transparent 75%);
+  box-shadow: inset 0 0 70px #b775b166;
+}
+.ui-overlay.mission-mood--alarm_amber {
+  background: linear-gradient(#cf9a2d33, transparent);
+}
+.ui-overlay.mission-mood--alarm_red {
+  box-shadow: inset 0 0 65px #e7977944;
+}
+.ui-overlay.mission-mood--golden_dawn,
+.ui-overlay.mission-mood--finale_dawn {
+  background: linear-gradient(#ffc16e22, transparent);
+}
+.ui-real-mars {
+  max-height: 65vh;
+  overflow-y: auto;
+}
+.ui-real-mars a {
+  text-decoration: underline;
+}
+.ui-real-mars details {
+  font-size: 0.9em;
+}
+.mission-effects {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 15;
+}
+.mission-effects img {
+  position: absolute;
+  width: 8%;
+  object-fit: contain;
+}
+.mission-effects__hiss {
+  left: 43%;
+  top: 47%;
+  opacity: 0.65;
+}
+.mission-effects__spark {
+  left: 32%;
+  top: 57%;
+  opacity: 0.7;
+}
+.mission-effects__ship {
+  right: 7%;
+  top: 8%;
+  width: 18% !important;
+}
+.mission-effects__meteor {
+  position: absolute;
+  width: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff4d6);
+  transform: rotate(-25deg);
+  right: 12%;
+  top: 20%;
+}
+.mission-effects__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, #d7a9e533, transparent 65%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mission-effects--moving .mission-effects__hiss {
+    animation: mission-puff 4s ease-out infinite;
+  }
+  .mission-effects--moving .mission-effects__meteor {
+    animation: mission-meteor 5s ease-out infinite;
+  }
+  .mission-camera-pan {
+    animation: mission-pan 2s ease-out 1;
+  }
+  @keyframes mission-puff {
+    from {
+      opacity: 0.2;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0.6;
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes mission-meteor {
+    0% {
+      opacity: 0;
+      transform: translate(30px, -15px) rotate(-25deg);
+    }
+    30% {
+      opacity: 0.6;
+    }
+    60%,
+    100% {
+      opacity: 0;
+      transform: translate(-60px, 30px) rotate(-25deg);
+    }
+  }
+  @keyframes mission-pan {
+    from {
+      transform: scale(1.015);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
+@media (max-width: 640px) {
+  .mission-night {
+    left: 5%;
+    right: 5%;
+    top: 30%;
+  }
+  .app-caution {
+    inset: 15% 5% auto;
+  }
+  .mission-classroom {
+    margin: 7rem 0.5rem 1rem;
+  }
+}
+
+.app-scene--classroom .ui-game__dock {
+  grid-template-columns: 1fr;
+}
+.app-scene--classroom .ui-game__dock .ui-dialogue,
+.app-scene--classroom .ui-game__dock .ui-speech,
+.app-scene--classroom .ui-game__dock .ui-after,
+.app-scene--classroom .ui-game__dock .ui-real-mars {
+  max-width: min(64rem, 100%);
+}
+
+.mission-warnings:not(:empty) {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: #392d18;
+  color: #fff0bd;
+  border-top: 1px solid #e9c66d;
+}
+.mission-warnings p {
+  margin: 0.25rem 0;
+}

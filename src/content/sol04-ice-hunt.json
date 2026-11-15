@@ -1,0 +1,18 @@
+{
+  "ice_hunt.narration.1": "The storm is over, and the sky is clear again! We need to plan our water supply.",
+  "ice_hunt.narration.2": "Time for an ice hunt! I’m sending the rover out.",
+  "ice_hunt.narration.3": "Wait... who is that?",
+  "ice_hunt.dialogue.1": "A short trip is safe. A long trip finds more ice, but the rover uses more power.",
+  "ice_hunt.dialogue.2": "Look, a rover! That’s Curiosity. It has explored Gale Crater since 2012!",
+  "ice_hunt.dialogue.3": "Curiosity: “Bip... boop-bip!”",
+  "ice_hunt.dialogue.4": "Curiosity says: Welcome to the neighborhood!",
+  "ice_hunt.question": "How far should the rover go?",
+  "ice_hunt.A.label": "Short trip (Life +8, Power −5)",
+  "ice_hunt.A.after": "The rover found a little ice close to base. Not a lot, but it was a safe trip.",
+  "ice_hunt.B.label": "Long trip (Life +18, Power −15, Shield −5)",
+  "ice_hunt.B.after": "Lots of water! But the long trip used a lot of power and kept us outside longer, where there is more radiation.",
+  "ice_hunt.C.label": "Ration the water (Life −3)",
+  "ice_hunt.C.after": "We saved power by staying home, but our water is getting low. We will need a plan soon.",
+  "ice_hunt.classroom": "What did the rover trip give us, and what did it use?",
+  "ice_hunt.cargo.rover_fuel": "Our extra rover supply reduced this trip’s power cost."
+}

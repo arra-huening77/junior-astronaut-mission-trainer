@@ -1,0 +1,113 @@
+{
+  "events": [
+    {
+      "id": "2012-03-07T00:36:00-CME-001",
+      "type": "CME",
+      "level": "active",
+      "observedAt": "2012-03-07T01:44Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/CME/1119/-1",
+      "classType": "CME speed 2200 km/s, type R"
+    },
+    {
+      "id": "2012-03-07T01:44:00-SEP-001",
+      "type": "SEP",
+      "level": "stormy",
+      "observedAt": "2012-03-07T01:44Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/205/-1"
+    },
+    {
+      "id": "2017-09-06T12:24:00-CME-001",
+      "type": "CME",
+      "level": "active",
+      "observedAt": "2017-09-06T14:03Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/CME/13013/-1",
+      "classType": "CME speed 1816 km/s, type O"
+    },
+    {
+      "id": "2017-09-06T15:51:00-FLR-001",
+      "type": "FLR",
+      "level": "active",
+      "observedAt": "2017-09-06T15:56Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13020/-1",
+      "classType": "M2.5"
+    },
+    {
+      "id": "2017-09-06T23:30:00-SEP-001",
+      "type": "SEP",
+      "level": "stormy",
+      "observedAt": "2017-09-06T23:30Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/13081/-1"
+    },
+    {
+      "id": "2017-09-07T14:20:00-FLR-001",
+      "type": "FLR",
+      "level": "stormy",
+      "observedAt": "2017-09-07T14:36Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13043/-1",
+      "classType": "X1.3"
+    },
+    {
+      "id": "2017-09-10T02:39:00-FLR-001",
+      "type": "FLR",
+      "level": "calm",
+      "observedAt": "2017-09-10T03:09Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13093/-1",
+      "classType": "C9.0"
+    },
+    {
+      "id": "2017-09-10T15:35:00-FLR-001",
+      "type": "FLR",
+      "level": "stormy",
+      "observedAt": "2017-09-10T16:06Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/13098/-1",
+      "classType": "X8.2"
+    },
+    {
+      "id": "2021-10-28T07:34:00-FLR-001",
+      "type": "FLR",
+      "level": "active",
+      "observedAt": "2021-10-28T07:40Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/18091/-1",
+      "classType": "M1.4"
+    },
+    {
+      "id": "2021-10-28T15:17:00-FLR-001",
+      "type": "FLR",
+      "level": "stormy",
+      "observedAt": "2021-10-28T15:35Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/18096/-1",
+      "classType": "X1.0"
+    },
+    {
+      "id": "2024-05-08T02:16:00-FLR-001",
+      "type": "FLR",
+      "level": "active",
+      "observedAt": "2024-05-08T02:27Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/30566/-1",
+      "classType": "M3.4"
+    },
+    {
+      "id": "2024-05-08T12:24:00-CME-001",
+      "type": "CME",
+      "level": "active",
+      "observedAt": "2024-05-08T15:16Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/CME/30564/-1",
+      "classType": "CME speed 1156 km/s, type O"
+    },
+    {
+      "id": "2024-05-09T13:59:00-SEP-001",
+      "type": "SEP",
+      "level": "stormy",
+      "observedAt": "2024-05-09T13:59Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/SEP/30609/-1"
+    },
+    {
+      "id": "2024-10-01T21:58:00-FLR-001",
+      "type": "FLR",
+      "level": "stormy",
+      "observedAt": "2024-10-01T22:20Z",
+      "sourceUrl": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/33656/-1",
+      "classType": "X7.1"
+    }
+  ]
+}

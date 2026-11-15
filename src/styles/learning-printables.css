@@ -1,0 +1,534 @@
+/* Paper-first printables. No learning text is baked into the lesson-plan artwork. */
+.teacher-cert--art .teacher-cert__sheet {
+  position: relative;
+  display: block;
+  container-type: inline-size;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.teacher-cert__art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.teacher-cert__art-name {
+  position: absolute;
+  left: 20%;
+  top: 43%;
+  width: 60%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #57344f;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.teacher-cert__preview {
+  position: absolute;
+  left: 20%;
+  top: 44%;
+  width: 60%;
+  padding: 0.5rem;
+  background: #fff7eddd;
+  color: #57344f;
+  font-size: clamp(0.7rem, 2cqw, 1.2rem);
+  text-align: center;
+}
+.teacher-cert--art .teacher-cert__name-field input {
+  background: #fff;
+  color: #142033;
+}
+.lesson-print-hint {
+  color: #d7d3e6;
+}
+.learn-shell .teacher-print__sheet.lesson-sheet,
+.teacher-print__sheet.lesson-sheet {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #222d37;
+}
+.lesson-page {
+  box-sizing: border-box;
+  max-width: 210mm;
+  margin: 0 auto 1.5rem;
+  padding: 12mm;
+  background: #fffdf9;
+  color: #222d37;
+  font:
+    14px/1.5 Arial,
+    sans-serif;
+  box-shadow: 0 8px 30px #0003;
+}
+.lesson-heading {
+  border-bottom: 3px solid #bb6c4f;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+.lesson-kicker {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #814733;
+  font-weight: 700;
+}
+.lesson-plan .lesson-heading h3,
+.learn-shell .lesson-plan .lesson-heading h3 {
+  margin: 5px 0;
+  font:
+    700 28px/1.15 Georgia,
+    serif;
+  color: #243549;
+}
+.lesson-heading p {
+  margin: 0;
+  color: #566471;
+  font-size: 12px;
+}
+.lesson-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #d9cbbd;
+  border-radius: 7px;
+  margin-bottom: 14px;
+  padding: 9px 12px;
+  gap: 7px 12px;
+  background: #f8f0e7;
+}
+.lesson-meta p {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  font-size: 13px;
+}
+.lesson-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.lesson-block {
+  padding: 11px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #d6d9da;
+  border-radius: 7px;
+}
+.lesson-plan .lesson-block h4,
+.learn-shell .lesson-plan .lesson-block h4 {
+  margin: -11px -12px 9px;
+  padding: 7px 12px;
+  color: #29483d;
+  background: #e9f0e8;
+  border-bottom: 1px solid #d6d9da;
+  border-radius: 7px 7px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+.lesson-block:nth-child(even) h4,
+.learn-shell .lesson-block:nth-child(even) h4 {
+  color: #754734;
+  background: #f7e8dc;
+}
+.lesson-block ul {
+  padding-left: 17px;
+  list-style: disc;
+  margin: 0;
+}
+.lesson-block li {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.lesson-block p {
+  font-size: 13px;
+  margin: 5px 0 0;
+}
+.lesson-procedure {
+  padding-bottom: 0;
+}
+.lesson-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+.lesson-table th,
+.lesson-table td {
+  padding: 9px 8px;
+  vertical-align: top;
+  text-align: left;
+  border: 1px solid #d5d8d9;
+  line-height: 1.5;
+}
+.lesson-table thead th {
+  background: #eee8f1;
+  color: #473750;
+}
+.lesson-table tbody th {
+  width: 23%;
+  background: #faf1e5;
+}
+.lesson-table td {
+  width: 38.5%;
+}
+.lesson-callout {
+  padding: 10px 12px;
+  border-left: 3px solid #bb6c4f;
+  background: #f9eee4;
+  font-size: 13px;
+}
+.lesson-page-number {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 7px;
+  border-top: 1px solid #d9cbbd;
+  color: #566471;
+  font-size: 12px;
+}
+.lesson-prompts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  font-size: 13px;
+}
+.lesson-prompts strong {
+  display: block;
+  color: #754734;
+}
+.lesson-prompts small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #566471;
+}
+.lesson-vocab {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 16px;
+  margin: 0;
+}
+.lesson-vocab dt,
+.learn-shell .lesson-vocab dt {
+  font-weight: 700;
+  color: #29483d;
+  font-size: 13px;
+}
+.lesson-vocab dd {
+  margin: 0;
+  font-size: 12px;
+}
+.lesson-reflection p {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: end;
+  gap: 12px;
+  margin: 12px 0;
+}
+.lesson-reflection p span {
+  border-bottom: 1px solid #b9b8b5;
+  min-height: 1em;
+}
+@media (max-width: 640px) {
+  .lesson-page {
+    padding: 18px;
+  }
+  .lesson-two-col,
+  .lesson-prompts,
+  .lesson-vocab {
+    grid-template-columns: 1fr;
+  }
+  .lesson-table-wrap {
+    overflow-x: auto;
+  }
+  .lesson-table {
+    min-width: 480px;
+  }
+  .lesson-meta {
+    grid-template-columns: 1fr;
+  }
+}
+@page mission-lesson {
+  size: A4 portrait;
+  margin: 12mm;
+}
+@page mission-certificate {
+  size: A4 landscape;
+  margin: 10mm;
+}
+@media print {
+  .lesson-plan {
+    page: mission-lesson;
+  }
+  .lesson-page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+    background: #fff !important;
+    box-shadow: none;
+  }
+  .lesson-page + .lesson-page {
+    break-before: page;
+  }
+  .lesson-two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lesson-prompts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lesson-vocab {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lesson-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+  .lesson-table-wrap {
+    overflow: visible;
+  }
+  .lesson-table {
+    min-width: 0;
+  }
+  .lesson-table tr,
+  .lesson-block,
+  .lesson-callout,
+  .lesson-heading {
+    break-inside: avoid;
+  }
+  .lesson-block h4,
+  .learn-shell .lesson-block h4 {
+    color: #222 !important;
+  }
+  .teacher-cert--art {
+    page: mission-certificate;
+  }
+  .teacher-cert--art .teacher-cert__sheet {
+    min-height: 0;
+    display: block;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    break-inside: avoid;
+  }
+  .teacher-cert__art {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .teacher-cert__art-name {
+    color: #57344f !important;
+  }
+}
+
+@media print {
+  .tn-shell {
+    min-height: 0;
+  }
+}
+
+/* Matching paper layouts for the discussion and vocabulary packs. */
+.discussion-cards {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.discussion-card {
+  border: 1px solid #d6d9da;
+  border-radius: 9px;
+  overflow: hidden;
+  break-inside: avoid;
+}
+.discussion-card header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: #f7e8dc;
+  border-bottom: 1px solid #e1d1c4;
+}
+.discussion-sol {
+  color: #814733;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.lesson-plan .discussion-card h4,
+.learn-shell .lesson-plan .discussion-card h4 {
+  margin: 0;
+  color: #243549;
+  font:
+    700 15px Georgia,
+    serif;
+}
+.discussion-question,
+.discussion-follow {
+  padding: 8px 12px;
+}
+.discussion-question span,
+.discussion-follow span {
+  display: block;
+  color: #566471;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+.discussion-card p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.discussion-follow {
+  padding-top: 0;
+}
+.vocabulary-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+.vocabulary-card {
+  position: relative;
+  padding: 17px 16px;
+  border: 1px solid #d4dcd6;
+  border-radius: 10px;
+  background: #f1f5ef;
+  break-inside: avoid;
+}
+.vocabulary-card:nth-child(4n + 2),
+.vocabulary-card:nth-child(4n + 3) {
+  background: #fbefe4;
+  border-color: #e5d5c7;
+}
+.vocabulary-number {
+  display: block;
+  color: #814733;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.lesson-plan .vocabulary-card dt,
+.learn-shell .lesson-plan .vocabulary-card dt {
+  color: #243549;
+  font:
+    700 21px Georgia,
+    serif;
+  margin-bottom: 8px;
+}
+.vocabulary-card dd {
+  margin: 0;
+  color: #222d37;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .vocabulary-cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .vocabulary-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mission Log: five roomy sol rows per page, with all three meters named. */
+.mission-log-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  background: #eef2f5;
+  border: 1px solid #d5dce1;
+  border-radius: 7px;
+  color: #334758;
+  font-size: 11px;
+}
+.mission-journal-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+.mission-journal-table th,
+.mission-journal-table td {
+  border: 1px solid #cfd4d5;
+  padding: 9px 7px;
+  vertical-align: top;
+}
+.mission-journal-table thead th {
+  text-align: left;
+  background: #eee8f1;
+  color: #473750;
+  font-size: 11px;
+}
+.mission-journal-table thead th:nth-child(1) {
+  width: 6%;
+}
+.mission-journal-table thead th:nth-child(2) {
+  width: 22%;
+}
+.mission-journal-table thead th:nth-child(3) {
+  width: 10%;
+}
+.mission-journal-table thead th:nth-child(4) {
+  width: 31%;
+}
+.mission-journal-table thead th:nth-child(5) {
+  width: 31%;
+}
+.mission-journal-table tbody th {
+  text-align: center;
+  background: #faf1e5;
+  color: #754734;
+  font-size: 16px;
+}
+.mission-journal-table tbody td {
+  height: 90px;
+}
+.journal-meter-lines p {
+  margin: 0 0 9px;
+  white-space: nowrap;
+  font-size: 11px;
+}
+.journal-writing-lines {
+  min-height: 70px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 22px,
+    #d7dcde 22px,
+    #d7dcde 23px
+  );
+}
+.journal-choice-line {
+  display: block;
+  border-bottom: 1px solid #bac3c7;
+  margin-top: 35px;
+}
+.journal-reflection-line {
+  height: 24px;
+  border-bottom: 1px solid #cfd4d5;
+}
+@media (max-width: 640px) {
+  .mission-journal-table {
+    min-width: 600px;
+  }
+}
+@media print {
+  .mission-journal-table {
+    min-width: 0;
+  }
+  .mission-journal-table tr,
+  .journal-discovery {
+    break-inside: avoid;
+  }
+}

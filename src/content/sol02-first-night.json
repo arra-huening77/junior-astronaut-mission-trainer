@@ -1,0 +1,15 @@
+{
+  "first_night.narration.1": "The Sun is going down, Commander. Our solar panels can’t make power in the dark, so the batteries must do all the work tonight.",
+  "first_night.narration.2": "And Mars nights get very cold!",
+  "first_night.dialogue.1": "Heating uses a lot of power. But the plants need to stay warm!",
+  "first_night.dialogue.2": "Warm and cozy, or save power for tomorrow? Hmm.",
+  "first_night.question": "How warm should we be tonight?",
+  "first_night.A.label": "Full heating (Power −15, Life +2)",
+  "first_night.A.after": "Everyone is toasty! Heating used power, so tomorrow’s sunshine matters.",
+  "first_night.B.label": "Half heating (Power −8, Life −2)",
+  "first_night.B.after": "A bit chilly, but we saved some power. Careful planning is part of every mission.",
+  "first_night.C.label": "Heat the greenhouse only (Power −4, Life −5)",
+  "first_night.C.after": "The plants are safe, but the crew is cold. We kept most of our power, though we feel it in our toes!",
+  "first_night.classroom": "Why do batteries matter when the Sun goes down?",
+  "first_night.cargo.batteries": "Our battery upgrade helps with tonight’s power use."
+}

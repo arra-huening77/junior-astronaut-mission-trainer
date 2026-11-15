@@ -1,0 +1,1851 @@
+/* Rover Drive — open terrain (no square grid), reference HUD look */
+
+.mg-preview {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.mg-rover {
+  --mg-navy: #152038;
+  --mg-panel: rgba(18, 28, 48, 0.82);
+  --mg-line: rgba(120, 190, 255, 0.85);
+  --mg-cream: #f4f1ea;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  min-height: min(92vh, 760px);
+  padding: 0.65rem;
+  border-radius: 22px;
+  color: var(--mg-cream);
+  background: linear-gradient(165deg, #0d1422 0%, #16110f 100%);
+  border: 2px solid rgba(120, 190, 255, 0.22);
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+  overflow: hidden;
+}
+
+.mg-rover--won {
+  box-shadow: 0 0 0 2px rgba(120, 190, 255, 0.35);
+}
+
+.mg-rover__hud {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+  align-items: start;
+  justify-items: center;
+}
+
+.mg-rover__chip {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 14px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+  box-shadow: 0 0 16px rgba(80, 160, 255, 0.18);
+  font-weight: 800;
+}
+
+.mg-rover__chip--ghost {
+  opacity: 0.95;
+}
+
+.mg-rover__chip-flag {
+  color: #ffd76a;
+}
+
+.mg-rover__title-card {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 18px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+  box-shadow: 0 0 20px rgba(80, 160, 255, 0.2);
+}
+
+.mg-rover__title-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.mg-rover__title-card p {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #d7e7ff;
+}
+
+.mg-rover__title-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 10px;
+  border: 2px solid #0d1422;
+  background-color: #ddd4c8;
+  background-image: url('/assets/minigames/rover_top.png');
+  background-size: 400% 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+.mg-rover__playfield {
+  position: relative;
+  min-height: clamp(300px, 58vh, 520px);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid rgba(18, 24, 36, 0.95);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.mg-rover__playfield--bump {
+  animation: mg-bump 0.3s ease;
+}
+
+.mg-rover__vista {
+  position: absolute;
+  inset: 0;
+}
+
+.mg-rover__vista img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  transform: scale(1.04);
+}
+
+.mg-rover__vista-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 16, 28, 0.25) 0%, transparent 28%),
+    linear-gradient(0deg, rgba(40, 18, 10, 0.28), transparent 35%);
+  pointer-events: none;
+}
+
+.mg-rover__path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.mg-rover__path-line {
+  stroke: rgba(255, 255, 255, 0.92);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-dasharray: 2.2 2.4;
+  filter: drop-shadow(0 0 2px rgba(120, 190, 255, 0.65));
+}
+
+.mg-rover__path-line--flow {
+  animation: mg-dash 1.1s linear infinite;
+}
+
+.mg-rover__rock {
+  position: absolute;
+  z-index: 3;
+  transform: translate(-50%, -70%);
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 4px 0 rgba(20, 12, 24, 0.45));
+  pointer-events: none;
+}
+
+.mg-rover__pad {
+  position: absolute;
+  z-index: 4;
+  width: min(18%, 120px);
+  aspect-ratio: 1.35;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #111 0 10px,
+      #f0c419 10px 20px
+    )
+      bottom / 100% 14px no-repeat,
+    linear-gradient(180deg, #3a4252 0%, #232833 100%);
+  border: 3px solid #10151f;
+  box-shadow:
+    0 0 0 2px rgba(240, 196, 25, 0.35),
+    0 10px 24px rgba(0, 0, 0, 0.4),
+    0 0 24px rgba(90, 180, 255, 0.35);
+  display: grid;
+  place-items: center;
+}
+
+.mg-rover__pad--pulse {
+  animation: mg-pad-glow 1.6s ease-in-out infinite;
+}
+
+.mg-rover__pad-flag {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #6ec8ff;
+  filter: drop-shadow(0 0 8px rgba(110, 200, 255, 0.9));
+}
+
+.mg-rover__rover {
+  position: absolute;
+  z-index: 5;
+  width: clamp(52px, 9vw, 78px);
+  height: clamp(52px, 9vw, 78px);
+  transform: translate(-50%, -55%);
+  background-image: url('/assets/minigames/rover_top.png');
+  background-repeat: no-repeat;
+  background-size: 400% 100%;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 0 rgba(16, 12, 24, 0.5));
+  transition: left 0.18s ease, top 0.18s ease;
+}
+
+.mg-rover__rover--dust::after {
+  content: '';
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: -8%;
+  height: 35%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(210, 150, 100, 0.55), transparent 70%);
+  animation: mg-dust 0.38s ease-out;
+}
+
+.mg-rover__toast {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  margin: 0;
+  max-width: min(90%, 28rem);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 20, 34, 0.82);
+  border: 1px solid rgba(120, 190, 255, 0.35);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mg-rover__celebrate {
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  padding: 0.9rem 1.2rem;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(16, 24, 40, 0.94);
+  border: 2px solid #7ec8ff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.mg-rover__celebrate p {
+  margin: 0;
+  color: #ffe27a;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.mg-rover__celebrate span {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.mg-rover__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: end;
+}
+
+.mg-rover__dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 3.15rem);
+  grid-template-rows: repeat(2, 3.15rem);
+  gap: 0.4rem;
+  padding: 0.55rem;
+  border-radius: 18px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+  box-shadow: 0 0 18px rgba(80, 160, 255, 0.16);
+}
+
+.mg-dir {
+  border: 0;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a2230;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.mg-dir--up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.mg-dir--left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.mg-dir--down {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.mg-dir--right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.mg-dir:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.mg-dir:active:not(:disabled),
+.mg-dir--active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.mg-rover__side {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: end;
+  align-content: end;
+}
+
+.mg-rover__progress-label,
+.mg-rover__instruction {
+  margin: 0;
+  max-width: 28rem;
+  text-align: right;
+  font-size: 0.86rem;
+  color: #d7e7ff;
+}
+
+.mg-rover__actions {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.mg-go {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  border: 4px solid #8fd0ff;
+  background: radial-gradient(circle at 35% 30%, #5aa7ef 0%, #2f6fbf 55%, #1d4f91 100%);
+  color: #fff;
+  font: inherit;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 3px rgba(20, 30, 50, 0.65),
+    0 0 28px rgba(90, 180, 255, 0.45),
+    0 10px 0 #16345f;
+}
+
+.mg-go:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.mg-go:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow:
+    0 0 0 3px rgba(20, 30, 50, 0.65),
+    0 0 22px rgba(90, 180, 255, 0.4),
+    0 6px 0 #16345f;
+}
+
+.mg-skip {
+  min-height: 44px;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--mg-cream);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mg-dir:focus-visible,
+.mg-go:focus-visible,
+.mg-skip:focus-visible {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 2px;
+}
+
+.mg-dir:disabled,
+.mg-go:disabled,
+.mg-skip:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+@keyframes mg-bump {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-3px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes mg-dash {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+@keyframes mg-pad-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(240, 196, 25, 0.35),
+      0 10px 24px rgba(0, 0, 0, 0.4),
+      0 0 18px rgba(90, 180, 255, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(240, 196, 25, 0.5),
+      0 10px 24px rgba(0, 0, 0, 0.4),
+      0 0 30px rgba(90, 180, 255, 0.65);
+  }
+}
+
+@keyframes mg-dust {
+  from {
+    opacity: 0.85;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mg-rover__playfield--bump,
+  .mg-rover__path-line--flow,
+  .mg-rover__pad--pulse,
+  .mg-rover__rover--dust::after {
+    animation: none;
+  }
+
+  .mg-rover__rover {
+    transition: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .mg-rover__hud {
+    grid-template-columns: 1fr;
+  }
+
+  .mg-rover__controls {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .mg-rover__side {
+    justify-items: center;
+    width: 100%;
+  }
+
+  .mg-rover__progress-label,
+  .mg-rover__instruction {
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .mg-rover {
+    min-height: auto;
+  }
+
+  .mg-rover__playfield {
+    min-height: 320px;
+  }
+
+  .mg-go {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+.mg-preview .ui-preview__dev a {
+  color: #8fd0ff;
+}
+
+/* Cover Panels */
+
+.mg-panels {
+  --mg-panel: rgba(18, 28, 48, 0.82);
+  --mg-line: rgba(120, 190, 255, 0.85);
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  min-height: min(88vh, 720px);
+  padding: 0.65rem;
+  border-radius: 22px;
+  color: #f4f1ea;
+  background: #1a120e;
+  border: 2px solid rgba(120, 190, 255, 0.22);
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+  overflow: hidden;
+}
+
+/* Full-bleed Mars landscape behind HUD, stage, and footer */
+.mg-panels::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url('/assets/bg/sky_dust.png') center 55% / cover no-repeat;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.mg-panels::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 70% 18%, rgba(210, 140, 80, 0.2), transparent 42%),
+    linear-gradient(180deg, rgba(12, 16, 28, 0.18), transparent 30%, rgba(12, 16, 28, 0.28) 100%);
+  pointer-events: none;
+}
+
+.mg-panels > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mg-panels--won {
+  box-shadow: 0 0 0 2px rgba(120, 190, 255, 0.35);
+}
+
+.mg-panels__hud {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.mg-panels__chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 14px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+  font-weight: 800;
+}
+
+.mg-panels__title-card {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 18px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+}
+
+.mg-panels__title-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.mg-panels__title-card p {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #d7e7ff;
+}
+
+.mg-panels__title-icon {
+  width: 2.5rem;
+  height: 1.9rem;
+  border-radius: 8px;
+  border: 2px solid #0d1422;
+  background: url('/assets/minigames/panel.png') center / contain no-repeat;
+  image-rendering: pixelated;
+}
+
+.mg-panels__stage {
+  position: relative;
+  min-height: clamp(280px, 52vh, 480px);
+  border-radius: 18px;
+  overflow: visible;
+  background: transparent;
+}
+
+.mg-panels__field {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.45rem, 2vw, 1rem);
+  align-content: center;
+  height: 100%;
+  padding: 8% 4% 8%;
+}
+
+.mg-panels__slot {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  padding: 0.75rem 0.4rem 0.9rem;
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background: rgba(18, 24, 36, 0.45);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mg-panels__slot--open {
+  border-color: rgba(255, 210, 100, 0.55);
+}
+
+.mg-panels__slot--glow {
+  animation: mg-panel-glow 1.5s ease-in-out infinite;
+}
+
+.mg-panels__slot--covered {
+  border-color: rgba(120, 190, 255, 0.55);
+  background: rgba(20, 40, 60, 0.55);
+}
+
+.mg-panels__slot--focus {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 2px;
+}
+
+.mg-panels__slot:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+
+.mg-panels__number {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ffe27a;
+  text-shadow: 0 1px 0 #121820;
+}
+
+.mg-panels__art,
+.mg-panels__cover {
+  width: min(100%, 140px);
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.35));
+}
+
+.mg-panels__cover {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: min(92%, 140px);
+  transform: translate(-50%, -40%) scaleY(0.15);
+  transform-origin: top center;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.mg-panels__cover--on {
+  transform: translate(-50%, -55%) scaleY(1);
+  opacity: 1;
+}
+
+.mg-panels__cover--instant {
+  transition: none;
+}
+
+.mg-panels__toast {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  margin: 0;
+  max-width: min(92%, 30rem);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 20, 34, 0.85);
+  border: 1px solid rgba(120, 190, 255, 0.35);
+  text-align: center;
+  font-weight: 700;
+}
+
+.mg-panels__celebrate {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  padding: 0.9rem 1.2rem;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(16, 24, 40, 0.94);
+  border: 2px solid #7ec8ff;
+}
+
+.mg-panels__celebrate p {
+  margin: 0;
+  color: #ffe27a;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.mg-panels__celebrate span {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.mg-panels__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mg-panels__instruction {
+  margin: 0;
+  max-width: 40rem;
+  color: #d7e7ff;
+  font-size: 0.9rem;
+}
+
+@keyframes mg-panel-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 210, 100, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 210, 100, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mg-panels__slot--glow {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .mg-panels__hud {
+    grid-template-columns: 1fr;
+  }
+
+  .mg-panels__field {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-top: 16%;
+  }
+}
+
+/* Repair Wires */
+
+.mg-wires {
+  --mg-panel: rgba(18, 28, 48, 0.82);
+  --mg-line: rgba(120, 190, 255, 0.85);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  min-height: min(88vh, 720px);
+  padding: 0.65rem;
+  border-radius: 22px;
+  color: #f4f1ea;
+  background: linear-gradient(165deg, #0d1422 0%, #141018 100%);
+  border: 2px solid rgba(120, 190, 255, 0.22);
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+}
+
+.mg-wires--won {
+  box-shadow: 0 0 0 2px rgba(120, 190, 255, 0.35);
+}
+
+.mg-wires__hud {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.mg-wires__chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 14px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+  font-weight: 800;
+}
+
+.mg-wires__title-card {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 18px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+}
+
+.mg-wires__title-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.mg-wires__title-card p {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #d7e7ff;
+}
+
+.mg-wires__title-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  border: 2px solid #0d1422;
+  background: url('/assets/minigames/wire_board.png') center / cover no-repeat;
+}
+
+.mg-wires__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: clamp(260px, 50vh, 460px);
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 3px solid #121820;
+  background: rgba(8, 12, 22, 0.55);
+}
+
+.mg-wires__board-wrap {
+  position: relative;
+  width: min(100%, 640px);
+  aspect-ratio: 320 / 180;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.mg-wires__board {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  image-rendering: pixelated;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.mg-wires__lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mg-wires__line {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.35));
+}
+
+.mg-wires__line--pulse {
+  animation: mg-wire-glow 1.4s ease-in-out infinite;
+}
+
+.mg-wires__port {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  min-width: 3.1rem;
+  min-height: 3.1rem;
+  padding: 0.2rem 0.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.05rem;
+  border-radius: 14px;
+  border: 3px solid #1a2538;
+  background: rgba(12, 18, 32, 0.92);
+  color: #f4f1ea;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 2px var(--mg-wire-color),
+    0 4px 0 #0a1020;
+}
+
+.mg-wires__port-symbol {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.mg-wires__port-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d7e7ff;
+}
+
+.mg-wires__port--idle:not(:disabled) {
+  animation: mg-wire-idle 2.2s ease-in-out infinite;
+}
+
+.mg-wires__port--selected {
+  outline: 3px solid #ffe27a;
+  outline-offset: 3px;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.mg-wires__port--focus {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 3px;
+}
+
+.mg-wires__port--linked {
+  opacity: 0.92;
+  cursor: default;
+  transform: translate(-50%, -50%) scale(0.96);
+  box-shadow:
+    0 0 0 2px var(--mg-wire-color),
+    0 0 12px var(--mg-wire-color);
+}
+
+.mg-wires__port:focus-visible {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 3px;
+}
+
+.mg-wires__port:disabled:not(.mg-wires__port--linked) {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.mg-wires__spark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  image-rendering: pixelated;
+  animation: mg-spark-pop 0.36s ease-out;
+}
+
+.mg-wires__toast {
+  margin: 0;
+  max-width: min(92%, 32rem);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 20, 34, 0.85);
+  border: 1px solid rgba(120, 190, 255, 0.35);
+  text-align: center;
+  font-weight: 700;
+}
+
+.mg-wires__celebrate {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 12%;
+  transform: translateX(-50%);
+  padding: 0.9rem 1.2rem;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(16, 24, 40, 0.94);
+  border: 2px solid #7ec8ff;
+}
+
+.mg-wires__celebrate p {
+  margin: 0;
+  color: #ffe27a;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.mg-wires__celebrate span {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.mg-wires__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mg-wires__instruction {
+  margin: 0;
+  max-width: 40rem;
+  color: #d7e7ff;
+  font-size: 0.9rem;
+}
+
+.mg-wires__fallback {
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(20, 28, 44, 0.9);
+  border: 2px solid rgba(255, 160, 120, 0.5);
+}
+
+.mg-wires--nudge .mg-wires__board-wrap {
+  animation: mg-wire-nudge 0.42s ease-out;
+}
+
+@keyframes mg-wire-glow {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes mg-wire-idle {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.12);
+  }
+}
+
+@keyframes mg-wire-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes mg-spark-pop {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mg-wires__port--idle,
+  .mg-wires__line--pulse,
+  .mg-wires--nudge .mg-wires__board-wrap {
+    animation: none;
+  }
+}
+
+.mg-wires--testing .mg-wires__board {
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 0 0 2px rgba(120, 190, 255, 0.35);
+}
+
+.mg-wires--powered .mg-wires__board {
+  box-shadow:
+    0 8px 28px rgba(80, 180, 255, 0.35),
+    0 0 24px rgba(120, 220, 255, 0.25);
+}
+
+.mg-wires__test-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 640px);
+  padding: 0.55rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(12, 20, 36, 0.88);
+  border: 2px solid rgba(120, 190, 255, 0.35);
+}
+
+.mg-wires__led {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(8, 14, 28, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.mg-wires__led-bulb {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: #554422;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.mg-wires__led--ready .mg-wires__led-bulb {
+  background: #8a6a20;
+  box-shadow: 0 0 6px rgba(255, 200, 80, 0.45);
+}
+
+.mg-wires__led--live .mg-wires__led-bulb {
+  background: var(--mg-wire-color, #7ec8ff);
+  box-shadow: 0 0 10px var(--mg-wire-color, #7ec8ff);
+}
+
+.mg-wires__led--pulse .mg-wires__led-bulb {
+  animation: mg-wire-glow 1.2s ease-in-out 2;
+}
+
+.mg-wires__test-btn {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border-radius: 14px;
+  border: 2px solid #7ec8ff;
+  background: linear-gradient(180deg, #2a4a78 0%, #1a3058 100%);
+  color: #f4f1ea;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mg-wires__test-btn:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.mg-wires__test-btn:focus-visible {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 2px;
+}
+
+.mg-wires__test-btn:disabled {
+  opacity: 0.85;
+  cursor: default;
+}
+
+.mg-wires__test-hint {
+  flex: 1 1 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #b8d4ff;
+}
+
+@media (max-width: 720px) {
+  .mg-wires__hud {
+    grid-template-columns: 1fr;
+  }
+
+  .mg-wires__port {
+    min-width: 2.85rem;
+    min-height: 2.85rem;
+  }
+
+  .mg-wires__port-label {
+    font-size: 0.5rem;
+  }
+
+  .mg-wires__test-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mg-wires__led {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mg-wires__led--pulse .mg-wires__led-bulb {
+    animation: none;
+  }
+}
+
+.mg-wires__clues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 640px);
+  margin: 0 auto;
+  padding: 0.35rem 0.5rem;
+  border-radius: 14px;
+  background: rgba(12, 20, 36, 0.75);
+  border: 1px solid rgba(120, 190, 255, 0.25);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.mg-wires__clue-pill {
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(8, 14, 28, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mg-wires__clue-training {
+  margin-left: auto;
+  color: #b8d4ff;
+  font-weight: 700;
+}
+
+.mg-wires__obstacle {
+  position: absolute;
+  left: 38%;
+  top: 28%;
+  width: 24%;
+  height: 44%;
+  pointer-events: none;
+  border-radius: 8px;
+  border: 2px dashed rgba(255, 120, 80, 0.55);
+  background: rgba(120, 28, 12, 0.22);
+  display: grid;
+  place-items: center;
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: #ffb89a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.mg-wires__conduit-grid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mg-wires__conduit-lane {
+  stroke: rgba(120, 190, 255, 0.22);
+  stroke-width: 1.2;
+  stroke-dasharray: 2.5 2.5;
+}
+
+.mg-wires__conduit-lane--busy {
+  stroke: rgba(255, 200, 100, 0.55);
+  stroke-width: 2;
+}
+
+.mg-wires__port--matched {
+  outline: 2px dashed #8fd0ff;
+  outline-offset: 2px;
+}
+
+.mg-wires__port--route {
+  animation: mg-wire-glow 1.2s ease-in-out infinite;
+}
+
+.mg-wires__route-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  align-items: stretch;
+  width: min(100%, 640px);
+  padding: 0.55rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(12, 20, 36, 0.88);
+  border: 2px solid rgba(255, 160, 100, 0.35);
+}
+
+.mg-wires__route-title {
+  margin: 0;
+  text-align: center;
+  font-weight: 800;
+  color: #ffe27a;
+}
+
+.mg-wires__route-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.mg-wires__route-btn {
+  min-height: 44px;
+  padding: 0.45rem 0.6rem;
+  border-radius: 14px;
+  border: 2px solid rgba(120, 190, 255, 0.45);
+  background: rgba(16, 28, 48, 0.92);
+  color: #f4f1ea;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mg-wires__route-btn--a {
+  border-color: rgba(90, 212, 255, 0.55);
+}
+
+.mg-wires__route-btn--b {
+  border-color: rgba(255, 154, 212, 0.45);
+}
+
+.mg-wires__route-btn:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.mg-wires__route-btn:focus-visible {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .mg-wires__route-options {
+    grid-template-columns: 1fr;
+  }
+
+  .mg-wires__clue-training {
+    flex: 1 1 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mg-wires__port--route {
+    animation: none;
+  }
+}
+
+/* Patch Leak */
+
+.mg-leak {
+  --mg-panel: rgba(18, 28, 48, 0.82);
+  --mg-line: rgba(120, 190, 255, 0.85);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  min-height: min(88vh, 720px);
+  padding: 0.65rem;
+  border-radius: 22px;
+  color: #f4f1ea;
+  background: linear-gradient(165deg, #0d1422 0%, #12141c 100%);
+  border: 2px solid rgba(120, 190, 255, 0.22);
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+}
+
+.mg-leak--won {
+  box-shadow: 0 0 0 2px rgba(120, 190, 255, 0.35);
+}
+
+.mg-leak__hud {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.mg-leak__chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 14px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+  font-weight: 800;
+}
+
+.mg-leak__title-card {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 18px;
+  background: var(--mg-panel);
+  border: 2px solid var(--mg-line);
+}
+
+.mg-leak__title-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.mg-leak__title-card p {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  color: #d7e7ff;
+}
+
+.mg-leak__title-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  border: 2px solid #0d1422;
+  background: url('/assets/minigames/air_module_cutaway.png') center / cover no-repeat;
+}
+
+.mg-leak__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: clamp(260px, 50vh, 460px);
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 3px solid #121820;
+  background: rgba(8, 12, 22, 0.55);
+}
+
+.mg-leak__module-wrap {
+  position: relative;
+  width: min(100%, 640px);
+  aspect-ratio: 320 / 180;
+  border-radius: 12px;
+}
+
+.mg-leak__module {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  image-rendering: pixelated;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.mg-leak__spot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  min-width: 3.4rem;
+  min-height: 3.4rem;
+  padding: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: rgba(8, 14, 28, 0.55);
+  cursor: pointer;
+  font: inherit;
+  color: #f4f1ea;
+}
+
+.mg-leak__spot--open {
+  border-color: rgba(255, 140, 120, 0.75);
+  box-shadow: 0 0 0 2px rgba(255, 120, 90, 0.25);
+}
+
+.mg-leak__spot--open.mg-leak__spot--hiss {
+  animation: mg-leak-wobble 2.4s ease-in-out infinite;
+}
+
+.mg-leak__spot--patched {
+  border-color: rgba(120, 220, 160, 0.85);
+  background: rgba(12, 28, 22, 0.72);
+  cursor: default;
+  box-shadow: 0 0 12px rgba(100, 220, 150, 0.35);
+}
+
+.mg-leak__spot--scanned {
+  outline: 2px dashed rgba(143, 208, 255, 0.75);
+  outline-offset: 3px;
+}
+
+.mg-leak__spot--scan {
+  cursor: crosshair;
+}
+
+.mg-leak--scan .mg-leak__module {
+  filter: saturate(0.92);
+}
+
+.mg-leak__tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 640px);
+  padding: 0.55rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(12, 20, 36, 0.88);
+  border: 2px solid rgba(120, 190, 255, 0.35);
+}
+
+.mg-leak__tray-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  min-height: 44px;
+  min-width: 7.5rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 14px;
+  border: 2px solid rgba(120, 190, 255, 0.45);
+  background: rgba(16, 28, 48, 0.92);
+  color: #f4f1ea;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mg-leak__tray-btn--selected {
+  border-color: #ffe27a;
+  box-shadow: 0 0 0 2px rgba(255, 226, 122, 0.35);
+}
+
+.mg-leak__tray-glyph {
+  font-size: 0.72rem;
+  color: #b8d4ff;
+  font-weight: 700;
+}
+
+.mg-leak__tray-hint {
+  flex: 1 1 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #b8d4ff;
+}
+
+.mg-leak__pressure-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 640px);
+  padding: 0.55rem 0.75rem;
+  border-radius: 16px;
+  background: rgba(12, 20, 36, 0.88);
+  border: 2px solid rgba(120, 190, 255, 0.35);
+}
+
+.mg-leak__gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: 7rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 14px;
+  background: rgba(8, 14, 28, 0.85);
+  border: 2px solid rgba(255, 160, 80, 0.45);
+}
+
+.mg-leak__gauge--stable {
+  border-color: rgba(120, 220, 140, 0.65);
+}
+
+.mg-leak__gauge--pulse .mg-leak__gauge-readout {
+  animation: mg-wire-glow 1.2s ease-in-out 2;
+}
+
+.mg-leak__gauge-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #d7e7ff;
+}
+
+.mg-leak__gauge-readout {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffb89a;
+  letter-spacing: 0.08em;
+}
+
+.mg-leak__gauge--stable .mg-leak__gauge-readout {
+  color: #9ef0a8;
+}
+
+.mg-leak__pressure-btn {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border-radius: 14px;
+  border: 2px solid #7ec8ff;
+  background: linear-gradient(180deg, #2a4a78 0%, #1a3058 100%);
+  color: #f4f1ea;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mg-leak__pressure-btn:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.mg-leak__pressure-btn:focus-visible {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 2px;
+}
+
+.mg-leak__pressure-btn:disabled {
+  opacity: 0.85;
+  cursor: default;
+}
+
+.mg-leak--testing .mg-leak__module {
+  box-shadow: 0 0 0 2px rgba(120, 190, 255, 0.35);
+}
+
+.mg-leak--stable .mg-leak__module {
+  box-shadow: 0 0 24px rgba(120, 220, 255, 0.25);
+}
+
+.mg-leak__clues {
+  display: flex;
+  justify-content: center;
+  width: min(100%, 640px);
+  margin: 0 auto;
+  padding: 0.25rem 0.5rem;
+}
+
+.mg-leak__clue-training {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #b8d4ff;
+}
+
+.mg-leak__spot--shape-round .mg-leak__marker {
+  border-radius: 50%;
+}
+
+.mg-leak__spot--shape-oval .mg-leak__marker {
+  width: 2.35rem;
+  height: 1.45rem;
+  border-radius: 999px;
+}
+
+.mg-leak__spot--shape-slit .mg-leak__marker {
+  width: 2.15rem;
+  height: 0.85rem;
+  border-radius: 4px;
+}
+
+.mg-leak__spot--decoy.mg-leak__spot--open {
+  border-color: rgba(180, 180, 200, 0.45);
+}
+
+.mg-leak__spot--decoy-done {
+  opacity: 0.72;
+}
+
+.mg-leak__rotate-btn {
+  min-height: 44px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 226, 122, 0.55);
+  background: rgba(40, 32, 16, 0.88);
+  color: #ffe27a;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mg-leak__rotate-btn:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.mg-leak__rotate-btn:focus-visible {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 2px;
+}
+
+.mg-leak__pressure-order {
+  width: min(100%, 640px);
+  padding: 0.45rem 0.75rem;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.82rem;
+  background: rgba(28, 18, 12, 0.88);
+  border: 2px solid rgba(255, 160, 100, 0.4);
+  color: #ffd0b0;
+}
+
+.mg-leak__spot--focus {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 3px;
+}
+
+.mg-leak__spot:focus-visible {
+  outline: 3px solid #8fd0ff;
+  outline-offset: 3px;
+}
+
+.mg-leak__spot:disabled {
+  opacity: 0.95;
+}
+
+.mg-leak__marker {
+  width: 2rem;
+  height: 2rem;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.mg-leak__spot-tag {
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #d7e7ff;
+}
+
+.mg-leak__hiss {
+  position: absolute;
+  top: -0.35rem;
+  right: -0.45rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  pointer-events: none;
+  image-rendering: pixelated;
+  animation: mg-leak-hiss 0.38s ease-out;
+}
+
+.mg-leak__toast {
+  margin: 0;
+  max-width: min(92%, 32rem);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(14, 20, 34, 0.85);
+  border: 1px solid rgba(120, 190, 255, 0.35);
+  text-align: center;
+  font-weight: 700;
+}
+
+.mg-leak__celebrate {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 12%;
+  transform: translateX(-50%);
+  padding: 0.9rem 1.2rem;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(16, 24, 40, 0.94);
+  border: 2px solid #7ec8ff;
+}
+
+.mg-leak__celebrate p {
+  margin: 0;
+  color: #ffe27a;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.mg-leak__celebrate span {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.mg-leak__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mg-leak__instruction {
+  margin: 0;
+  max-width: 40rem;
+  color: #d7e7ff;
+  font-size: 0.9rem;
+}
+
+.mg-leak__fallback {
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(20, 28, 44, 0.9);
+  border: 2px solid rgba(255, 160, 120, 0.5);
+}
+
+@keyframes mg-leak-wobble {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, calc(-50% - 2px));
+  }
+}
+
+@keyframes mg-leak-hiss {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mg-leak__spot--hiss,
+  .mg-leak__hiss,
+  .mg-leak__gauge--pulse .mg-leak__gauge-readout {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .mg-leak__hud {
+    grid-template-columns: 1fr;
+  }
+
+  .mg-leak__spot {
+    min-width: 3rem;
+    min-height: 3rem;
+  }
+
+  .mg-leak__marker {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}

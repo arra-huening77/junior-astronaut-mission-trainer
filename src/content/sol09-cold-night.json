@@ -1,0 +1,16 @@
+{
+  "cold_night.narration.1": "Brrr! Tonight is the coldest night yet in our story.",
+  "cold_night.narration.2": "Heaters use a lot of power. The plants and crew need warmth, but heating every system costs power.",
+  "cold_night.narration.3": "What can we switch off? What matters most, Commander?",
+  "cold_night.dialogue.1": "Plants freeze if it gets too cold. Tomorrow’s food needs them!",
+  "cold_night.dialogue.2": "Maybe we turn off what we don’t need.",
+  "cold_night.question": "Where does the heat go?",
+  "cold_night.A.label": "Heat everything (Power −18, Life +3)",
+  "cold_night.A.after": "Everyone is warm, plants and crew! Heating everything used a lot of power.",
+  "cold_night.B.label": "Heat the crew and plants only, lab off (Power −10)",
+  "cold_night.B.after": "We kept what matters warm and saved power by switching off the lab. Good prioritizing!",
+  "cold_night.C.label": "Minimum heat (Power −5, Life −5, plants suffer)",
+  "cold_night.C.after": "We saved lots of power, but the plants got too cold, and tomorrow’s food will be smaller.",
+  "cold_night.classroom": "Which systems did you choose to heat?",
+  "cold_night.cargo.greenhouse_kit": "Our greenhouse kit helps us use supplies carefully."
+}

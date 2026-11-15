@@ -1,0 +1,342 @@
+/* Mission Album — Member 4 */
+
+.album-shell {
+  min-height: 100vh;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+  color: #142033;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(0, 210, 255, 0.16), transparent 40%),
+    radial-gradient(
+      circle at 80% 100%,
+      rgba(255, 140, 60, 0.18),
+      transparent 42%
+    ),
+    linear-gradient(160deg, #1a2048 0%, #4a2818 50%, #12182a 100%);
+}
+
+.album-frame {
+  width: min(980px, 100%);
+  max-height: min(92vh, 900px);
+  overflow: auto;
+  padding: 1rem 1.1rem 1.2rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #243988, #15244f);
+  border: 4px solid #0d1638;
+  box-shadow:
+    0 0 0 3px rgba(0, 210, 255, 0.35),
+    0 22px 48px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 2px rgba(0, 210, 255, 0.35);
+  color: #eaf7ff;
+}
+
+.album-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.album-eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffb800;
+  font-weight: 800;
+}
+
+.album-top h1 {
+  margin: 0.2rem 0 0.25rem;
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+}
+
+.album-sub {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.92rem;
+}
+
+.album-top__actions {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.album-btn {
+  min-height: 44px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, transparent 48%),
+    linear-gradient(180deg, #4aa4ef, #2465be);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #143f7a;
+}
+
+.album-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.album-close {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  border: 2px solid #00d2ff;
+  background: linear-gradient(180deg, #3aa0ef, #1d5fbf);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #143f7a;
+}
+
+.album-empty {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  background: rgba(247, 251, 255, 0.96);
+  color: #142033;
+}
+
+.album-empty img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.album-body {
+  display: grid;
+  grid-template-columns: minmax(10rem, 14rem) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.album-grid {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.album-thumb {
+  display: grid;
+  gap: 0.35rem;
+  text-align: left;
+  padding: 0.4rem;
+  border-radius: 14px;
+  border: 2px solid rgba(0, 210, 255, 0.28);
+  background: rgba(247, 251, 255, 0.96);
+  color: #142033;
+  font: inherit;
+  cursor: pointer;
+}
+
+.album-thumb--active {
+  border-color: #ffb800;
+  box-shadow: 0 0 0 2px rgba(255, 184, 0, 0.45);
+}
+
+.album-thumb img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.album-thumb__missing {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  background: #e8eef6;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.album-thumb__label {
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 0 0.2rem 0.15rem;
+}
+
+.album-detail {
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background: rgba(247, 251, 255, 0.97);
+  color: #142033;
+  border: 2px solid rgba(0, 210, 255, 0.28);
+}
+
+.album-detail header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.album-detail h2 {
+  margin: 0;
+  color: #15244f;
+}
+
+.album-pill {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: #fff4cc;
+  border: 1px solid rgba(255, 184, 0, 0.45);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.album-detail .ui-photo-frame {
+  margin: 0 0 0.75rem;
+}
+
+.album-fact {
+  margin: 0 0 0.45rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.album-note {
+  margin: 0 0 0.45rem;
+  color: #4a5568;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.album-source,
+.album-missing {
+  margin: 0 0 0.45rem;
+  color: #4a5568;
+  font-size: 0.92rem;
+}
+
+.album-link {
+  font-weight: 800;
+  color: #1d5fbf;
+}
+
+.album-print-only {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .album-body {
+    grid-template-columns: 1fr;
+  }
+
+  .album-grid {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(7.5rem, 9rem);
+    overflow-x: auto;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .album-shell {
+    background: #fff;
+    padding: 0;
+    display: block;
+  }
+
+  .album-frame {
+    border: none;
+    box-shadow: none;
+    background: #fff;
+    color: #142033;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .album-body {
+    display: block;
+  }
+
+  .album-detail {
+    display: none;
+  }
+
+  .album-print-only {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .album-print-card {
+    break-inside: avoid;
+    padding: 0.75rem;
+    border: 2px solid #1a2b6d;
+    border-radius: 12px;
+  }
+
+  .album-print-card img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+/* Keep the selected photo and its explanation together on screen. */
+@media screen {
+  .album-frame,
+  .album-grid {
+    scrollbar-width: thin;
+    scrollbar-color: #8fa6c480 transparent;
+    overscroll-behavior: contain;
+  }
+  .album-frame {
+    scrollbar-gutter: stable;
+  }
+  .album-frame::-webkit-scrollbar,
+  .album-grid::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .album-frame::-webkit-scrollbar-track,
+  .album-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .album-frame::-webkit-scrollbar-thumb,
+  .album-grid::-webkit-scrollbar-thumb {
+    background: #8fa6c480;
+    border-radius: 999px;
+  }
+  .album-frame::-webkit-scrollbar-button,
+  .album-grid::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  .album-detail .ui-photo-frame__mat {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #e6edf5;
+    border-color: #a8b8cb;
+  }
+  .album-detail .ui-photo-frame__mat img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: clamp(180px, 32dvh, 320px);
+    object-fit: contain;
+  }
+}

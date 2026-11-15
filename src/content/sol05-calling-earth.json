@@ -1,0 +1,17 @@
+{
+  "calling_earth.narration.1": "Uh-oh. One of our solar arrays is flickering.",
+  "calling_earth.narration.2": "Let’s call Mission Control on Earth! But Mars is very far away.",
+  "calling_earth.narration.3": "Our signal takes about 12 minutes to get there, and 12 more for the answer to come back.",
+  "calling_earth.dialogue.1": "We could wait for Earth, or I could try fixing it now.",
+  "calling_earth.dialogue.2": "Waiting uses power too. What do you think, Commander?",
+  "calling_earth.question": "What now?",
+  "calling_earth.A.label": "Wait for Earth (Power −8 while waiting, then Earth’s tip gives Power +5 and a safe fix)",
+  "calling_earth.A.after": "Dr. Thiri’s tip fixed it safely! Waiting cost us some power, but we learned a new trick.",
+  "calling_earth.reply.A": "Hello, Commander! Thanks for your call. Let’s look at that array together.",
+  "calling_earth.B.label": "Fix it now with Kai (Power −10, fixed)",
+  "calling_earth.B.after": "Kai fixed it fast, all on our own! Deciding without help from Earth is part of life on Mars.",
+  "calling_earth.C.label": "Ignore it and keep researching (Science +2, the flicker returns bigger on Sol 7)",
+  "calling_earth.C.after": "We got extra science, but the flicker is still there. Small problems can come back bigger.",
+  "calling_earth.classroom": "Why could Earth not answer straight away?",
+  "calling_earth.cargo.radio_booster": "The booster helped us use Earth’s tip. The message still took time to travel."
+}

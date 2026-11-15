@@ -1,0 +1,1194 @@
+{
+  "source_project": "D:/Projects/tuesday",
+  "purpose": "Import existing preparation accurately; no implementation creation or history rewriting.",
+  "files": [
+    {
+      "path": ".env.example",
+      "source_sha256": "6f417e5ff1c9f97611b0ebdc3af7fbd93b0803cd7adba7a21912b15a77597976",
+      "source_modified_at": 1794321338.6659608,
+      "import_sha256": "6f417e5ff1c9f97611b0ebdc3af7fbd93b0803cd7adba7a21912b15a77597976",
+      "bytes": 168,
+      "handoff_updated": false
+    },
+    {
+      "path": ".gitignore",
+      "source_sha256": "c229223e241d205fa762df19f68f52eae2857cf5ceadc8215cb156bf13f64aec",
+      "source_modified_at": 1794321337.5855408,
+      "import_sha256": "e006c1d92781d1649a1d67c2be8d7af9cb192c8a8cfe240a2f4ac131844e6111",
+      "bytes": 310,
+      "handoff_adjustment": "Added Python cache ignores for the imported preparation tools.",
+      "handoff_updated": true
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "84e7e135e5900cfff3e912fd5826933e4a910dc73377ebc9f15ccee6d8c134e2",
+      "source_modified_at": 1794589231.892421,
+      "import_sha256": "3310acc59be281ffa145c7275504c6a00f3d90a94de94307bd3d13f4ca20567b",
+      "bytes": 116008,
+      "handoff_adjustment": "Trailing whitespace normalized; confirmed product wording unchanged.",
+      "handoff_updated": true
+    },
+    {
+      "path": "asset-preparation/README.md",
+      "source_sha256": "754718b0bd519a9d1c0843f9ceee5c01cd64deb0b1404bff88d3db412b9f9fbd",
+      "source_modified_at": 1794589229.1112444,
+      "import_sha256": "b26ccabe9b7ef79eeb9637152319e30080d082807e42a2db20b95499cb6ba1a0",
+      "bytes": 3635,
+      "handoff_updated": true
+    },
+    {
+      "path": "asset-preparation/asset-log.md",
+      "source_sha256": "aa3c83f1ffb84e32edcdf52ed662d68f87749196365de640acbfb6646ebc901c",
+      "source_modified_at": 1794589229.1162608,
+      "import_sha256": "aa3c83f1ffb84e32edcdf52ed662d68f87749196365de640acbfb6646ebc901c",
+      "bytes": 5477,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/bg/mars_ground.png",
+      "source_sha256": "b885824930f20ee99f924f3b97bc374bd164fd17e072d005cd225b3178092e06",
+      "source_modified_at": 1794585769.2452567,
+      "import_sha256": "b885824930f20ee99f924f3b97bc374bd164fd17e072d005cd225b3178092e06",
+      "bytes": 114741,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/bg/mount_sharp.png",
+      "source_sha256": "81ada7d1aa87d1f359cfab449a55c613f01963cf99218d0aa654fb3ad2db4cf7",
+      "source_modified_at": 1794585769.2472546,
+      "import_sha256": "81ada7d1aa87d1f359cfab449a55c613f01963cf99218d0aa654fb3ad2db4cf7",
+      "bytes": 56731,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/bg/sky_dawn.png",
+      "source_sha256": "b2c42168fd9659daf619e6afe1a427ed5aeb10c4f42cd21876e0fa806da4120f",
+      "source_modified_at": 1794585769.2472546,
+      "import_sha256": "b2c42168fd9659daf619e6afe1a427ed5aeb10c4f42cd21876e0fa806da4120f",
+      "bytes": 34647,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/bg/sky_day.png",
+      "source_sha256": "86450b02ac66b785d61bcdf1df558c06a21e486c43bce563601b34bea60def16",
+      "source_modified_at": 1794585769.2482548,
+      "import_sha256": "86450b02ac66b785d61bcdf1df558c06a21e486c43bce563601b34bea60def16",
+      "bytes": 16211,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/bg/sky_dusk.png",
+      "source_sha256": "262f0786e70d7c28bc9e6ff01b970e3a7b1502d2a379a6f9d338bc3acdf07a3a",
+      "source_modified_at": 1794585769.2482548,
+      "import_sha256": "262f0786e70d7c28bc9e6ff01b970e3a7b1502d2a379a6f9d338bc3acdf07a3a",
+      "bytes": 28916,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/bg/sky_dust.png",
+      "source_sha256": "2fb4f81058b3e4d33d335a3b159de53e7d33297c0f2859473b836a74e8b9a1b9",
+      "source_modified_at": 1794585769.2492547,
+      "import_sha256": "2fb4f81058b3e4d33d335a3b159de53e7d33297c0f2859473b836a74e8b9a1b9",
+      "bytes": 35528,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/bg/sky_night.png",
+      "source_sha256": "08170ac0acf7ca47a3e4e59d6f47ab33badd00ad49acc74e12e7d4cbfad79439",
+      "source_modified_at": 1794585769.250256,
+      "import_sha256": "08170ac0acf7ca47a3e4e59d6f47ab33badd00ad49acc74e12e7d4cbfad79439",
+      "bytes": 19276,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/air_module.png",
+      "source_sha256": "023aba783a6a56517fd1106a83c4345e3bf51e1967a46449c71ba0cd4f7f277f",
+      "source_modified_at": 1794585769.250256,
+      "import_sha256": "023aba783a6a56517fd1106a83c4345e3bf51e1967a46449c71ba0cd4f7f277f",
+      "bytes": 11965,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/battery_box.png",
+      "source_sha256": "fc0c3483eee332df163465e32cb92064a34ed014069ec3c5994725cc8ae7ccb3",
+      "source_modified_at": 1794585769.271256,
+      "import_sha256": "fc0c3483eee332df163465e32cb92064a34ed014069ec3c5994725cc8ae7ccb3",
+      "bytes": 559407,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/comms_dish.png",
+      "source_sha256": "db4c357bb202dc2ba82e3e19198f1ffcfc20b404320d1afcf3ab298284bd7f3f",
+      "source_modified_at": 1794585769.2512603,
+      "import_sha256": "db4c357bb202dc2ba82e3e19198f1ffcfc20b404320d1afcf3ab298284bd7f3f",
+      "bytes": 9926,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/extra_panels.png",
+      "source_sha256": "458e621b335b41edd4b33d41dc525a735d7d5fa95dbc684283161612ef1db6e2",
+      "source_modified_at": 1794585769.286257,
+      "import_sha256": "458e621b335b41edd4b33d41dc525a735d7d5fa95dbc684283161612ef1db6e2",
+      "bytes": 866466,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/greenhouse.png",
+      "source_sha256": "342494977afcfe04451b9ff100c2eb398e1a992a17a5060571483a1ba01fcf00",
+      "source_modified_at": 1794585769.2522583,
+      "import_sha256": "342494977afcfe04451b9ff100c2eb398e1a992a17a5060571483a1ba01fcf00",
+      "bytes": 23911,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/habitat.png",
+      "source_sha256": "5d502f53a19450bacfb0c336a6bd034dcd738a554d1c2b7931b427a6297c449c",
+      "source_modified_at": 1794585769.2532594,
+      "import_sha256": "5d502f53a19450bacfb0c336a6bd034dcd738a554d1c2b7931b427a6297c449c",
+      "bytes": 27081,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/rover_garage_closed.png",
+      "source_sha256": "2dfe83cf1884d8b6eeee4ad3569c8c001788420923fe1f33081695a191a26aa3",
+      "source_modified_at": 1794585769.2532594,
+      "import_sha256": "2dfe83cf1884d8b6eeee4ad3569c8c001788420923fe1f33081695a191a26aa3",
+      "bytes": 9762,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/rover_garage_open.png",
+      "source_sha256": "6ee736bc25f1b220a1ee2f577a9c0ea60f0b98377a71692161c132106fd15912",
+      "source_modified_at": 1794585769.2542548,
+      "import_sha256": "6ee736bc25f1b220a1ee2f577a9c0ea60f0b98377a71692161c132106fd15912",
+      "bytes": 10531,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/shelter_closed.png",
+      "source_sha256": "9fd475bc2db32d358ad2030b6b6a9a9bf03e6460ccbfe72b1a341371db980f7a",
+      "source_modified_at": 1794585769.2542548,
+      "import_sha256": "9fd475bc2db32d358ad2030b6b6a9a9bf03e6460ccbfe72b1a341371db980f7a",
+      "bytes": 5989,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/shelter_open.png",
+      "source_sha256": "e9754088ed02d523e6a939697c6a5380fc5f00cf9d728223aedf1e50179a5345",
+      "source_modified_at": 1794585769.255254,
+      "import_sha256": "e9754088ed02d523e6a939697c6a5380fc5f00cf9d728223aedf1e50179a5345",
+      "bytes": 6174,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/shield_plating.png",
+      "source_sha256": "29e75900c31019a366e9831073593f76099597e5e58557216ded44bfb7de40c3",
+      "source_modified_at": 1794585769.2947683,
+      "import_sha256": "29e75900c31019a366e9831073593f76099597e5e58557216ded44bfb7de40c3",
+      "bytes": 478006,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/solar_panels_clean.png",
+      "source_sha256": "9d95ff0acc7daaeeccad94ec7cf8ff3f5f4e48527a5aff301fe185121852da1d",
+      "source_modified_at": 1794585769.255254,
+      "import_sha256": "9d95ff0acc7daaeeccad94ec7cf8ff3f5f4e48527a5aff301fe185121852da1d",
+      "bytes": 22950,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/solar_panels_covered.png",
+      "source_sha256": "0a3be20a670b16546c0f487b26fb564759c149b1d34842eb7fa7f08ce2251954",
+      "source_modified_at": 1794585769.2562547,
+      "import_sha256": "0a3be20a670b16546c0f487b26fb564759c149b1d34842eb7fa7f08ce2251954",
+      "bytes": 23429,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/solar_panels_damaged.png",
+      "source_sha256": "44de531a6bbb23382582aa58f9ab6e9fb11374f88cf27be51fa40c33b93853b1",
+      "source_modified_at": 1794585769.2572548,
+      "import_sha256": "44de531a6bbb23382582aa58f9ab6e9fb11374f88cf27be51fa40c33b93853b1",
+      "bytes": 23382,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/solar_panels_dusty.png",
+      "source_sha256": "fd1129730b8d0801b97701c8e29ed211f6db28d35f17d5a4ef5db5f73f1a44ca",
+      "source_modified_at": 1794585769.2572548,
+      "import_sha256": "fd1129730b8d0801b97701c8e29ed211f6db28d35f17d5a4ef5db5f73f1a44ca",
+      "bytes": 13895,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/buildings/supply_ship.png",
+      "source_sha256": "9c0981d59bbd239684bb446489b07268f9425adfea394962fa1f187534240b96",
+      "source_modified_at": 1794585769.2572548,
+      "import_sha256": "9c0981d59bbd239684bb446489b07268f9425adfea394962fa1f187534240b96",
+      "bytes": 2368,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/batteries.png",
+      "source_sha256": "22cce1d7f8ab8dfc1d63426111e73f8b89028b6ec26440e3a72e7bc32c7e4858",
+      "source_modified_at": 1794585769.3097734,
+      "import_sha256": "22cce1d7f8ab8dfc1d63426111e73f8b89028b6ec26440e3a72e7bc32c7e4858",
+      "bytes": 741052,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/greenhouse_kit.png",
+      "source_sha256": "f4300e0292019757646332c0385d82a656e651307f2ff3169a88cab477bfc476",
+      "source_modified_at": 1794585769.3217716,
+      "import_sha256": "f4300e0292019757646332c0385d82a656e651307f2ff3169a88cab477bfc476",
+      "bytes": 624300,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/radio_booster.png",
+      "source_sha256": "9f357d9e7ab9d0a3c296fdd666ea48a9d2a62b8f52a9ca74ea89bf880d9fd7da",
+      "source_modified_at": 1794585769.333771,
+      "import_sha256": "9f357d9e7ab9d0a3c296fdd666ea48a9d2a62b8f52a9ca74ea89bf880d9fd7da",
+      "bytes": 683792,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/rover_fuel.png",
+      "source_sha256": "7dbfdc3dc37be7ba3f0e7269b9a62668883e83ba6a25186a2cd6570c0bd04717",
+      "source_modified_at": 1794585769.3447826,
+      "import_sha256": "7dbfdc3dc37be7ba3f0e7269b9a62668883e83ba6a25186a2cd6570c0bd04717",
+      "bytes": 584104,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/shield_plating.png",
+      "source_sha256": "8647c1642d96999b682076de93bc0b0c6ba8303bde4049c73374b297480589e3",
+      "source_modified_at": 1794585769.359768,
+      "import_sha256": "8647c1642d96999b682076de93bc0b0c6ba8303bde4049c73374b297480589e3",
+      "bytes": 771424,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/solar_extra.png",
+      "source_sha256": "e11ad683ee7530dab54e7c51123861b15d0f81e481e05bc9ce0d5767e8600382",
+      "source_modified_at": 1794585769.3737664,
+      "import_sha256": "e11ad683ee7530dab54e7c51123861b15d0f81e481e05bc9ce0d5767e8600382",
+      "bytes": 850227,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/spare_parts.png",
+      "source_sha256": "dbff24fb1a1e2f5246f5deb85a7d6a30e73fb23ad268fbd181f62e2ab9b55b09",
+      "source_modified_at": 1794585769.390776,
+      "import_sha256": "dbff24fb1a1e2f5246f5deb85a7d6a30e73fb23ad268fbd181f62e2ab9b55b09",
+      "bytes": 897168,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/cargo/water_recycler.png",
+      "source_sha256": "2a605c0747cb87373d95fffcb87858ae1662db0b26144763e0f2ffcfd6a752f9",
+      "source_modified_at": 1794585769.4148881,
+      "import_sha256": "2a605c0747cb87373d95fffcb87858ae1662db0b26144763e0f2ffcfd6a752f9",
+      "bytes": 1391700,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/commander-actions/cheer-master.png",
+      "source_sha256": "fa05a6ef3d5cd3fd8a630a8825e528d6c9062bed8da4211ceb78513b7b362728",
+      "source_modified_at": 1794386158.71679,
+      "import_sha256": "fa05a6ef3d5cd3fd8a630a8825e528d6c9062bed8da4211ceb78513b7b362728",
+      "bytes": 1318091,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/commander-actions/concerned-master.png",
+      "source_sha256": "b2c86b41243d959eedb5ff0ffb58839f494bd3fddc4fa2d6597108c1a9a2b4a3",
+      "source_modified_at": 1794386158.7374985,
+      "import_sha256": "b2c86b41243d959eedb5ff0ffb58839f494bd3fddc4fa2d6597108c1a9a2b4a3",
+      "bytes": 705301,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/commander-actions/walk-master.png",
+      "source_sha256": "3e6c5d5744870caf9884d9edae6064fdc6d54fbcafa84b69f441641561ac4e90",
+      "source_modified_at": 1794386158.7801776,
+      "import_sha256": "3e6c5d5744870caf9884d9edae6064fdc6d54fbcafa84b69f441641561ac4e90",
+      "bytes": 932521,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/commander_idle/generated-master.png",
+      "source_sha256": "d386dfbdaaf5f6249972cf9ddb3185f092257ec0c67abdba6e461ab3380d6c9a",
+      "source_modified_at": 1794386158.7960086,
+      "import_sha256": "d386dfbdaaf5f6249972cf9ddb3185f092257ec0c67abdba6e461ab3380d6c9a",
+      "bytes": 1211518,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/curiosity-and-work/curiosity-master.png",
+      "source_sha256": "d79ea12307751bf043c641b92dc0b7459637106a21a1eee54c64cddf330d700b",
+      "source_modified_at": 1794386158.8315322,
+      "import_sha256": "d79ea12307751bf043c641b92dc0b7459637106a21a1eee54c64cddf330d700b",
+      "bytes": 852998,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/curiosity-and-work/kai_work-master.png",
+      "source_sha256": "7b4ba56cd440230801a4013a14ae39ecb0ec3013a2538b7b141c7ec07fbe2f51",
+      "source_modified_at": 1794386158.8686671,
+      "import_sha256": "7b4ba56cd440230801a4013a14ae39ecb0ec3013a2538b7b141c7ec07fbe2f51",
+      "bytes": 960460,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/curiosity-and-work/mei_work-master.png",
+      "source_sha256": "cabf642be51cef31ab375b9ca9bc2ac33f1e81746890688613d7790d58a13fd7",
+      "source_modified_at": 1794386158.9009476,
+      "import_sha256": "cabf642be51cef31ab375b9ca9bc2ac33f1e81746890688613d7790d58a13fd7",
+      "bytes": 1017543,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/kai-portraits/concerned-master.png",
+      "source_sha256": "89dc456e41c4ed28622f753a3428f19252aff0b8c4972b6cdf4db58fd6a7adfb",
+      "source_modified_at": 1794386158.93987,
+      "import_sha256": "89dc456e41c4ed28622f753a3428f19252aff0b8c4972b6cdf4db58fd6a7adfb",
+      "bytes": 808293,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/kai-portraits/happy-master.png",
+      "source_sha256": "658f147c56ec10e27a53d41d06534b090abd441052e43d6ac774f76f432aa40d",
+      "source_modified_at": 1794386158.9744694,
+      "import_sha256": "658f147c56ec10e27a53d41d06534b090abd441052e43d6ac774f76f432aa40d",
+      "bytes": 813291,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/kai-portraits/neutral-master.png",
+      "source_sha256": "e427843c09c95e6886cecddec54f8e651a1742e96aa255c759b3a2767844be7d",
+      "source_modified_at": 1794386159.0023673,
+      "import_sha256": "e427843c09c95e6886cecddec54f8e651a1742e96aa255c759b3a2767844be7d",
+      "bytes": 803602,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/mei-portraits/concerned-master.png",
+      "source_sha256": "8da6ff4e950ffb0223a411e06e5af6007dcb9c0a204c02e4019d2af8c73dbab5",
+      "source_modified_at": 1794386159.0394187,
+      "import_sha256": "8da6ff4e950ffb0223a411e06e5af6007dcb9c0a204c02e4019d2af8c73dbab5",
+      "bytes": 877083,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/mei-portraits/happy-master.png",
+      "source_sha256": "f21b9343e3565e7100080940f114cb178eacd745e52a6a564aa38ea8e3cff8b3",
+      "source_modified_at": 1794386159.0755093,
+      "import_sha256": "f21b9343e3565e7100080940f114cb178eacd745e52a6a564aa38ea8e3cff8b3",
+      "bytes": 879828,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/mei-portraits/neutral-master.png",
+      "source_sha256": "504de91157b7edc351e706bdfeabd65c5f1dc039c010ca7e69bb476f88005a2f",
+      "source_modified_at": 1794386159.1011863,
+      "import_sha256": "504de91157b7edc351e706bdfeabd65c5f1dc039c010ca7e69bb476f88005a2f",
+      "bytes": 867615,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/mei-work-helmet/generated-master.png",
+      "source_sha256": "19efefc4cda76f6baae43ad7514d4d378c58bc8a7d7aaac3759b8bb64033fd66",
+      "source_modified_at": 1794386159.1339872,
+      "import_sha256": "19efefc4cda76f6baae43ad7514d4d378c58bc8a7d7aaac3759b8bb64033fd66",
+      "bytes": 1113382,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/robo_cheering.png",
+      "source_sha256": "b050bfab8dca6927eb75e055443e0d2f6fe07001e9b2e20ccf27e41cf4f45862",
+      "source_modified_at": 1794396247.5180764,
+      "import_sha256": "b050bfab8dca6927eb75e055443e0d2f6fe07001e9b2e20ccf27e41cf4f45862",
+      "bytes": 570241,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/robo_concerned.png",
+      "source_sha256": "34682545936549d401e3b09c93a8536e123d718e6ef873cbc84f35fef40bcca3",
+      "source_modified_at": 1794396056.8868527,
+      "import_sha256": "34682545936549d401e3b09c93a8536e123d718e6ef873cbc84f35fef40bcca3",
+      "bytes": 578619,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/robo_explaining.png",
+      "source_sha256": "32796ecd9fbc2785b1222c0d5fcc250918f618fbe0cd5a877afe24160d098748",
+      "source_modified_at": 1794395803.2427385,
+      "import_sha256": "32796ecd9fbc2785b1222c0d5fcc250918f618fbe0cd5a877afe24160d098748",
+      "bytes": 572623,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/robo_float.png",
+      "source_sha256": "5f96d2521d80bdacb4f6be29a033f5eecf2bbdd5d8c0bd18bde47cc8a66187bd",
+      "source_modified_at": 1794396649.85203,
+      "import_sha256": "5f96d2521d80bdacb4f6be29a033f5eecf2bbdd5d8c0bd18bde47cc8a66187bd",
+      "bytes": 958160,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/robo_idle.png",
+      "source_sha256": "a6243de502d41bb46d4a9bc60aed9784ad74937611ba3b797c98cf738737a569",
+      "source_modified_at": 1794396574.3023124,
+      "import_sha256": "a6243de502d41bb46d4a9bc60aed9784ad74937611ba3b797c98cf738737a569",
+      "bytes": 787584,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/robo_neutral.png",
+      "source_sha256": "cac0dc96f28a46396200a5e9987fef1f6874b05b3aba93a7c09e8927eed3b264",
+      "source_modified_at": 1794394210.1052642,
+      "import_sha256": "cac0dc96f28a46396200a5e9987fef1f6874b05b3aba93a7c09e8927eed3b264",
+      "bytes": 568607,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/robo_thinking.png",
+      "source_sha256": "20d67e2aadf01471d4caacffe549caa59b12f6fe85ca3b63a95c49f27cda623c",
+      "source_modified_at": 1794396410.2853498,
+      "import_sha256": "20d67e2aadf01471d4caacffe549caa59b12f6fe85ca3b63a95c49f27cda623c",
+      "bytes": 553999,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/thiri-portraits/concerned-master.png",
+      "source_sha256": "f9084bd2f2e69b3c343dca8ac9af2800330f604cdb2df7644983bc9dacd3339e",
+      "source_modified_at": 1794386159.1690235,
+      "import_sha256": "f9084bd2f2e69b3c343dca8ac9af2800330f604cdb2df7644983bc9dacd3339e",
+      "bytes": 826193,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/thiri-portraits/happy-master.png",
+      "source_sha256": "13bedf942fbd678f125cd6def1663277df9b01c0655702e0698484309dcf83ed",
+      "source_modified_at": 1794386159.1950705,
+      "import_sha256": "13bedf942fbd678f125cd6def1663277df9b01c0655702e0698484309dcf83ed",
+      "bytes": 816732,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/characters/thiri-portraits/neutral-master.png",
+      "source_sha256": "945c261f6731f9445ef4ec3920aee0aec86f08777970c308eab32e1a746b20cd",
+      "source_modified_at": 1794386159.2170992,
+      "import_sha256": "945c261f6731f9445ef4ec3920aee0aec86f08777970c308eab32e1a746b20cd",
+      "bytes": 777147,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/export-manifest.json",
+      "source_sha256": "a5d7642178c5e7dd9f64d2bd9fef493b877084130c1c47d21d56ae6c150efaf1",
+      "source_modified_at": 1794589065.417322,
+      "import_sha256": "a5d7642178c5e7dd9f64d2bd9fef493b877084130c1c47d21d56ae6c150efaf1",
+      "bytes": 31181,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/air_module_cutaway.png",
+      "source_sha256": "64348d6ee46bc290b96d1e5a3bca4f78198f2f2bbafb7edd0a9dc74b588bd47f",
+      "source_modified_at": 1794585769.439892,
+      "import_sha256": "64348d6ee46bc290b96d1e5a3bca4f78198f2f2bbafb7edd0a9dc74b588bd47f",
+      "bytes": 1333977,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/ice_patch.png",
+      "source_sha256": "f9e328725e5e761b45828cb6cff9851929edcaedddf738383ed1dc10caf89601",
+      "source_modified_at": 1794585769.4518871,
+      "import_sha256": "f9e328725e5e761b45828cb6cff9851929edcaedddf738383ed1dc10caf89601",
+      "bytes": 697006,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/leak_marker.png",
+      "source_sha256": "fbb1899c5f88f8c4ac1fcd5ef2a901a781be4a36b2228b1d39617b7c2ab11c0a",
+      "source_modified_at": 1794585769.4538877,
+      "import_sha256": "fbb1899c5f88f8c4ac1fcd5ef2a901a781be4a36b2228b1d39617b7c2ab11c0a",
+      "bytes": 93270,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/panel.png",
+      "source_sha256": "c4ee45e1ace178b90e0db9acfdc5d681d9940e5dfed5d4efaf6f3bd6ef86e7b4",
+      "source_modified_at": 1794585769.4748871,
+      "import_sha256": "c4ee45e1ace178b90e0db9acfdc5d681d9940e5dfed5d4efaf6f3bd6ef86e7b4",
+      "bytes": 1066567,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/panel_cover.png",
+      "source_sha256": "a248c00de3ec99b2bf8efe2af1c0a7693895b49e1ea8109c1c35a5d9db672732",
+      "source_modified_at": 1794585769.4923992,
+      "import_sha256": "a248c00de3ec99b2bf8efe2af1c0a7693895b49e1ea8109c1c35a5d9db672732",
+      "bytes": 925553,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/patch_sticker.png",
+      "source_sha256": "fa2d3c842baea27a44ff4f01a3ba5e182dec3a14c7895fb75023f29df722b182",
+      "source_modified_at": 1794585769.5137603,
+      "import_sha256": "fa2d3c842baea27a44ff4f01a3ba5e182dec3a14c7895fb75023f29df722b182",
+      "bytes": 751499,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/rock_large.png",
+      "source_sha256": "8b07a656fff217ddc59d1ab4915f6af3f2d2db603c956362d44322bc67b46d6a",
+      "source_modified_at": 1794585769.5317721,
+      "import_sha256": "8b07a656fff217ddc59d1ab4915f6af3f2d2db603c956362d44322bc67b46d6a",
+      "bytes": 970591,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/rock_medium.png",
+      "source_sha256": "db13f17228dca928282bee41ddd5b12ef1aba6eb5b26956f96ec0818155f3eee",
+      "source_modified_at": 1794585769.5417712,
+      "import_sha256": "db13f17228dca928282bee41ddd5b12ef1aba6eb5b26956f96ec0818155f3eee",
+      "bytes": 581328,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/rock_small.png",
+      "source_sha256": "8bf4496ea2aec7e2aab28ff9304d0d7ac4d92897d3b7f297602117437222298e",
+      "source_modified_at": 1794585769.5467856,
+      "import_sha256": "8bf4496ea2aec7e2aab28ff9304d0d7ac4d92897d3b7f297602117437222298e",
+      "bytes": 236121,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/rover_top.png",
+      "source_sha256": "bd24f488ca821d2c3ddd7b7a06589b425891a8d6a80481921db70bed527aa444",
+      "source_modified_at": 1794585769.5617726,
+      "import_sha256": "bd24f488ca821d2c3ddd7b7a06589b425891a8d6a80481921db70bed527aa444",
+      "bytes": 786603,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/minigames/wire_board.png",
+      "source_sha256": "f32fb37c27acbe6da77f94b4a1cb748b9b2e56516cfb76e7bce5d81b136a02bc",
+      "source_modified_at": 1794585769.5847876,
+      "import_sha256": "f32fb37c27acbe6da77f94b4a1cb748b9b2e56516cfb76e7bce5d81b136a02bc",
+      "bytes": 1232891,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/overlays/frost_corners.png",
+      "source_sha256": "2ecc16fac3997fb472bc181282a1ed64f96ec47ba0000b30334868ec77c212ad",
+      "source_modified_at": 1794585769.5902922,
+      "import_sha256": "2ecc16fac3997fb472bc181282a1ed64f96ec47ba0000b30334868ec77c212ad",
+      "bytes": 382132,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/rover-and-effects/hiss_puff-4x.png",
+      "source_sha256": "ad13e6d7356b6b3795e9e08d9bf0589fb48a2036ab83ad35ea2eef8ba4f9f25b",
+      "source_modified_at": 1794386159.2216282,
+      "import_sha256": "ad13e6d7356b6b3795e9e08d9bf0589fb48a2036ab83ad35ea2eef8ba4f9f25b",
+      "bytes": 452,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/rover-and-effects/hiss_puff-master.png",
+      "source_sha256": "eb7fb12b08133a0335535d111c8187c1c67597272ba678f5c978ab3b1e320883",
+      "source_modified_at": 1794386159.227623,
+      "import_sha256": "eb7fb12b08133a0335535d111c8187c1c67597272ba678f5c978ab3b1e320883",
+      "bytes": 212281,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/rover-and-effects/outpost_rover-master.png",
+      "source_sha256": "e66d1056a13e3399b767e715a5ea9019298e75bb5eb22925292da3b2a5ec03e8",
+      "source_modified_at": 1794386159.2582004,
+      "import_sha256": "e66d1056a13e3399b767e715a5ea9019298e75bb5eb22925292da3b2a5ec03e8",
+      "bytes": 958338,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/rover-and-effects/spark-4x.png",
+      "source_sha256": "367d262d10562e2b9d13be53d13ff3ccbc5b6ba5357e2a8bbae575c0d8af9e9b",
+      "source_modified_at": 1794386159.2592013,
+      "import_sha256": "367d262d10562e2b9d13be53d13ff3ccbc5b6ba5357e2a8bbae575c0d8af9e9b",
+      "bytes": 325,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/rover-and-effects/spark-master.png",
+      "source_sha256": "31d1c3fdb847929693af44f0869c1153d55d4aef74300c75bb75d000a265f399",
+      "source_modified_at": 1794386159.2643495,
+      "import_sha256": "31d1c3fdb847929693af44f0869c1153d55d4aef74300c75bb75d000a265f399",
+      "bytes": 149154,
+      "handoff_updated": false
+    },
+    {
+      "path": "docs/PROJECT_STRUCTURE.md",
+      "source_sha256": "492883703f133942aafd0b41714fc43ed98dad4d841c670c488eb83b3613992d",
+      "source_modified_at": 1794321655.1817327,
+      "import_sha256": "ec0ad7c6d925e06c19a9bfff7c64bde2350db2f13d4e95a2f062af168a3f43fc",
+      "bytes": 6188,
+      "handoff_updated": true
+    },
+    {
+      "path": "docs/TEAM_WORKFLOW.md",
+      "source_sha256": "8ad7cd02b96452f5f537bbbbb1682f8cfcb079c8730706778b593044c9bbb21d",
+      "source_modified_at": 1794623201.5570414,
+      "import_sha256": "59fb9a615b65de9ed33868e17bb092cebba59e9334af5690be0b4eadcc88d177",
+      "bytes": 33525,
+      "handoff_updated": true
+    },
+    {
+      "path": "docs/facts.md",
+      "source_sha256": "b6f730cd1b283849f6dbb72f77b4e86d9c8b5da718fcb01b4401704da48da4ef",
+      "source_modified_at": 1794321781.0671983,
+      "import_sha256": "b6f730cd1b283849f6dbb72f77b4e86d9c8b5da718fcb01b4401704da48da4ef",
+      "bytes": 302,
+      "handoff_updated": false
+    },
+    {
+      "path": "docs/story-script.md",
+      "source_sha256": "79fdbd1514975f94ae49fce7b6906f04bcfb953326da30d925e0108cd3a66a05",
+      "source_modified_at": 1794582516.60382,
+      "import_sha256": "47f605f934735273ce9d82573f66a977a3f7cb8dfd0d1eb4a9b1abd1d962fc01",
+      "bytes": 52190,
+      "handoff_updated": true
+    },
+    {
+      "path": "docs/team-workflow.svg",
+      "source_sha256": "5ad670267d2a0880a3af4326d9ef4cfbea63f036376b260e49d52ee859f488dc",
+      "source_modified_at": 1794623201.6365938,
+      "import_sha256": "5ad670267d2a0880a3af4326d9ef4cfbea63f036376b260e49d52ee859f488dc",
+      "bytes": 17543,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/bg/mars_ground.png",
+      "source_sha256": "3be9f669a450d2fd9544604ad7fb6e75ca65d1934326a59c0e722aa51615d021",
+      "source_modified_at": 1794589065.8994458,
+      "import_sha256": "3be9f669a450d2fd9544604ad7fb6e75ca65d1934326a59c0e722aa51615d021",
+      "bytes": 109035,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/bg/mount_sharp.png",
+      "source_sha256": "86fb96f56adbc5faf2045712242cc98b247aa3bdd75b224166c79c7b2d34feca",
+      "source_modified_at": 1794589065.9716272,
+      "import_sha256": "86fb96f56adbc5faf2045712242cc98b247aa3bdd75b224166c79c7b2d34feca",
+      "bytes": 15058,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/bg/sky_dawn.png",
+      "source_sha256": "7ef372cfcd6c58d0dce0b4b356fa00b6ebe00b752f770e5752060c888f10632d",
+      "source_modified_at": 1794589066.3020442,
+      "import_sha256": "7ef372cfcd6c58d0dce0b4b356fa00b6ebe00b752f770e5752060c888f10632d",
+      "bytes": 38871,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/bg/sky_day.png",
+      "source_sha256": "ed9ad454c26bc1762b5926bba88b5a5b678b15cf17eddcafb42e59c24b271a63",
+      "source_modified_at": 1794589066.0132177,
+      "import_sha256": "ed9ad454c26bc1762b5926bba88b5a5b678b15cf17eddcafb42e59c24b271a63",
+      "bytes": 17132,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/bg/sky_dusk.png",
+      "source_sha256": "5f068f8c607c43dbd6a47a705b3ac40ca17dc582c33a5ed227c84710bd2a9909",
+      "source_modified_at": 1794589066.079258,
+      "import_sha256": "5f068f8c607c43dbd6a47a705b3ac40ca17dc582c33a5ed227c84710bd2a9909",
+      "bytes": 30930,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/bg/sky_dust.png",
+      "source_sha256": "907ce95a5dd9b85f031b814e4f514d522900a862cc27702ad657ec15bf86944d",
+      "source_modified_at": 1794589066.1908514,
+      "import_sha256": "907ce95a5dd9b85f031b814e4f514d522900a862cc27702ad657ec15bf86944d",
+      "bytes": 38780,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/bg/sky_night.png",
+      "source_sha256": "c35609a0c9b5c84fce932c4005d494c77461abb49bbf99ceab7432acf3d07f0e",
+      "source_modified_at": 1794589066.1196725,
+      "import_sha256": "c35609a0c9b5c84fce932c4005d494c77461abb49bbf99ceab7432acf3d07f0e",
+      "bytes": 20320,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/air_module.png",
+      "source_sha256": "ad1fc228cd60a68701506ee5347dad57fdea94dd9917f9e13e1f53c8b38143b4",
+      "source_modified_at": 1794589066.3620605,
+      "import_sha256": "ad1fc228cd60a68701506ee5347dad57fdea94dd9917f9e13e1f53c8b38143b4",
+      "bytes": 3525,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/battery_box.png",
+      "source_sha256": "c3032ae422f5280f3c6e01ee2a9ffb572fba7840f31c000fb311fb875cd62a87",
+      "source_modified_at": 1794589068.4999921,
+      "import_sha256": "c3032ae422f5280f3c6e01ee2a9ffb572fba7840f31c000fb311fb875cd62a87",
+      "bytes": 723,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/comms_dish.png",
+      "source_sha256": "97d05ceaad4169ebaf394000539f016642db5c263a0441dfb6e854eea8be6a7f",
+      "source_modified_at": 1794589066.5774043,
+      "import_sha256": "97d05ceaad4169ebaf394000539f016642db5c263a0441dfb6e854eea8be6a7f",
+      "bytes": 4770,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/extra_panels.png",
+      "source_sha256": "499a60f452e31b1e57e59b9c1c7dfa4277275eb1abe80ed13a4465aa206b4e97",
+      "source_modified_at": 1794589068.463936,
+      "import_sha256": "499a60f452e31b1e57e59b9c1c7dfa4277275eb1abe80ed13a4465aa206b4e97",
+      "bytes": 4932,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/greenhouse.png",
+      "source_sha256": "46698e5525d747859bf46fca6e37572473e8185fdafc8d6224dacdc902e2b20d",
+      "source_modified_at": 1794589066.4137785,
+      "import_sha256": "46698e5525d747859bf46fca6e37572473e8185fdafc8d6224dacdc902e2b20d",
+      "bytes": 14131,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/habitat.png",
+      "source_sha256": "a8a7dd2b499d102a481b78c3134fcf5b5e6e046ff6fb7c8f01d3b6e7a273cacc",
+      "source_modified_at": 1794589066.3340597,
+      "import_sha256": "a8a7dd2b499d102a481b78c3134fcf5b5e6e046ff6fb7c8f01d3b6e7a273cacc",
+      "bytes": 15504,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/outpost_rover.png",
+      "source_sha256": "55c25039e13dc2572bb0d04ba2ce7452e9cf8b13111a2cccfdc788f186025ba7",
+      "source_modified_at": 1794589067.9048135,
+      "import_sha256": "55c25039e13dc2572bb0d04ba2ce7452e9cf8b13111a2cccfdc788f186025ba7",
+      "bytes": 15783,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/rover_garage_closed.png",
+      "source_sha256": "bc50afce9d0b8ffda492d913d21e91ec4ac4345bba6242f5ef1b858d201b00a8",
+      "source_modified_at": 1794589066.6062376,
+      "import_sha256": "bc50afce9d0b8ffda492d913d21e91ec4ac4345bba6242f5ef1b858d201b00a8",
+      "bytes": 6064,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/rover_garage_open.png",
+      "source_sha256": "9aad57ca3c0e096984f5a6b079b991dd60275e16b47f5c09888bb4251f3d8155",
+      "source_modified_at": 1794589066.631777,
+      "import_sha256": "9aad57ca3c0e096984f5a6b079b991dd60275e16b47f5c09888bb4251f3d8155",
+      "bytes": 6320,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/shelter_closed.png",
+      "source_sha256": "d3e23977eac2631f9811b36abf26406b6b3680784fc264fbc43ee9f6fa1869a1",
+      "source_modified_at": 1794589066.6558764,
+      "import_sha256": "d3e23977eac2631f9811b36abf26406b6b3680784fc264fbc43ee9f6fa1869a1",
+      "bytes": 3024,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/shelter_open.png",
+      "source_sha256": "3788d1abe0e31ba2c8d1989068a767bd399c9932b06459453fde9de3bb5566cd",
+      "source_modified_at": 1794589066.6791503,
+      "import_sha256": "3788d1abe0e31ba2c8d1989068a767bd399c9932b06459453fde9de3bb5566cd",
+      "bytes": 3118,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/shield_plating.png",
+      "source_sha256": "daf266309b7a725684cf03eb6329a6e0b36baf59fd521a00d203be7458bc5f0a",
+      "source_modified_at": 1794589068.5204806,
+      "import_sha256": "daf266309b7a725684cf03eb6329a6e0b36baf59fd521a00d203be7458bc5f0a",
+      "bytes": 1060,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/solar_panels_clean.png",
+      "source_sha256": "7a61762ba8639a4e09ec1117b9816742badb0aa3d89b3397a66d66234e2ade1d",
+      "source_modified_at": 1794589066.4604008,
+      "import_sha256": "7a61762ba8639a4e09ec1117b9816742badb0aa3d89b3397a66d66234e2ade1d",
+      "bytes": 9931,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/solar_panels_covered.png",
+      "source_sha256": "da500f9edccd0401d98254657ac6b92067160fc0f422bde937065ac5a2299549",
+      "source_modified_at": 1794589066.524683,
+      "import_sha256": "da500f9edccd0401d98254657ac6b92067160fc0f422bde937065ac5a2299549",
+      "bytes": 9788,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/solar_panels_damaged.png",
+      "source_sha256": "805f0c3fcf9c0dbdcd6f2779fe2825ca7fadd88e28db2e252d24a655603aca84",
+      "source_modified_at": 1794589066.5596428,
+      "import_sha256": "805f0c3fcf9c0dbdcd6f2779fe2825ca7fadd88e28db2e252d24a655603aca84",
+      "bytes": 9969,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/solar_panels_dusty.png",
+      "source_sha256": "457da1109f3f2bcc5e705b88455c248d3f5635e5f98b127878beb2226ae2d94e",
+      "source_modified_at": 1794589066.4877553,
+      "import_sha256": "457da1109f3f2bcc5e705b88455c248d3f5635e5f98b127878beb2226ae2d94e",
+      "bytes": 13598,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/buildings/supply_ship.png",
+      "source_sha256": "9a690b2353a55eca97185ff7755099ca30e24619b9db8d5c07dd4fa3a1bcc1ec",
+      "source_modified_at": 1794589066.7050574,
+      "import_sha256": "9a690b2353a55eca97185ff7755099ca30e24619b9db8d5c07dd4fa3a1bcc1ec",
+      "bytes": 1205,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/batteries.png",
+      "source_sha256": "120c33f3c7b8a280916af8e65079cecba9eb1533bdd3e13046bd8b964429c19d",
+      "source_modified_at": 1794589068.1648085,
+      "import_sha256": "120c33f3c7b8a280916af8e65079cecba9eb1533bdd3e13046bd8b964429c19d",
+      "bytes": 14351,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/greenhouse_kit.png",
+      "source_sha256": "c27eb3cc3715f7d04ffaebd4ab153d7ed540ef209b2836c3f6bb596b359f5c5d",
+      "source_modified_at": 1794589068.2427032,
+      "import_sha256": "c27eb3cc3715f7d04ffaebd4ab153d7ed540ef209b2836c3f6bb596b359f5c5d",
+      "bytes": 12004,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/radio_booster.png",
+      "source_sha256": "4a1af6ed766432e80b656d5dfa89e1854db8dc924236025f2010788eb879704b",
+      "source_modified_at": 1794589068.4240594,
+      "import_sha256": "4a1af6ed766432e80b656d5dfa89e1854db8dc924236025f2010788eb879704b",
+      "bytes": 13603,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/rover_fuel.png",
+      "source_sha256": "f1c5c4140c68eef1bf9f85c3b2dba20c90865db026baa1b05ae9ded7ff278b69",
+      "source_modified_at": 1794589068.3821154,
+      "import_sha256": "f1c5c4140c68eef1bf9f85c3b2dba20c90865db026baa1b05ae9ded7ff278b69",
+      "bytes": 11827,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/shield_plating.png",
+      "source_sha256": "2aaa5d5ad3461e8db0a17aceaa077a3eec9f93c39a6ba7d4496a4e262a51b162",
+      "source_modified_at": 1794589068.2021818,
+      "import_sha256": "2aaa5d5ad3461e8db0a17aceaa077a3eec9f93c39a6ba7d4496a4e262a51b162",
+      "bytes": 16167,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/solar_extra.png",
+      "source_sha256": "f5334ab8875b0a6f92baaa5b92c57b59b5077a2479155b01fafc84da86243b17",
+      "source_modified_at": 1794589068.1238856,
+      "import_sha256": "f5334ab8875b0a6f92baaa5b92c57b59b5077a2479155b01fafc84da86243b17",
+      "bytes": 16470,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/spare_parts.png",
+      "source_sha256": "6acdbc7b680600eb12152c22b310d238d14fb248ab70036706a16267270e8f69",
+      "source_modified_at": 1794589068.3407567,
+      "import_sha256": "6acdbc7b680600eb12152c22b310d238d14fb248ab70036706a16267270e8f69",
+      "bytes": 17915,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/cargo/water_recycler.png",
+      "source_sha256": "b2679220d69e3b7226ad889ffdd3064b48f55c7a9311a74284cc2b3fdcc87bbc",
+      "source_modified_at": 1794589068.2953353,
+      "import_sha256": "b2679220d69e3b7226ad889ffdd3064b48f55c7a9311a74284cc2b3fdcc87bbc",
+      "bytes": 27194,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/commander_cheer.png",
+      "source_sha256": "2f752637cd8c89297355b5b5e0214d59f3aeee7a7e1f9472cc24af35c9913892",
+      "source_modified_at": 1794589066.9129407,
+      "import_sha256": "2f752637cd8c89297355b5b5e0214d59f3aeee7a7e1f9472cc24af35c9913892",
+      "bytes": 25522,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/commander_concerned.png",
+      "source_sha256": "5da16f5341cdbb562bc36c460215ce26328c3a81a1a2dfbc3eea3b82bdd00524",
+      "source_modified_at": 1794589066.9563897,
+      "import_sha256": "5da16f5341cdbb562bc36c460215ce26328c3a81a1a2dfbc3eea3b82bdd00524",
+      "bytes": 9725,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/commander_idle.png",
+      "source_sha256": "01e72946b76b9af88eb75804377d54d3c09c4ba623a5ec455aa61156c06d31e2",
+      "source_modified_at": 1794589066.7942553,
+      "import_sha256": "01e72946b76b9af88eb75804377d54d3c09c4ba623a5ec455aa61156c06d31e2",
+      "bytes": 22474,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/commander_walk.png",
+      "source_sha256": "9b70cfaafec8f08ff28323e288ebbc4643715267407068baf44551feca9e1c6c",
+      "source_modified_at": 1794589066.8577025,
+      "import_sha256": "9b70cfaafec8f08ff28323e288ebbc4643715267407068baf44551feca9e1c6c",
+      "bytes": 42949,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/curiosity.png",
+      "source_sha256": "5f7307b499ef9b5a651ee2d42026807f85dd4dfd328b326468b29b5809007293",
+      "source_modified_at": 1794589067.9474902,
+      "import_sha256": "5f7307b499ef9b5a651ee2d42026807f85dd4dfd328b326468b29b5809007293",
+      "bytes": 14581,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/kai_concerned.png",
+      "source_sha256": "24761a6281e2fa02f08c961c7de79062e8237d347c7cd2aae8d99efd8ba8bd65",
+      "source_modified_at": 1794589067.135674,
+      "import_sha256": "24761a6281e2fa02f08c961c7de79062e8237d347c7cd2aae8d99efd8ba8bd65",
+      "bytes": 102521,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/kai_happy.png",
+      "source_sha256": "3b6fcc741ebfa723cf667f74433395e519cf805a6849cc2afa6d413150ba46de",
+      "source_modified_at": 1794589067.2431674,
+      "import_sha256": "3b6fcc741ebfa723cf667f74433395e519cf805a6849cc2afa6d413150ba46de",
+      "bytes": 102854,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/kai_neutral.png",
+      "source_sha256": "35289f1a00083b42796c9ec34ad0f2242ef6b0afea1fea158bb32425901966b6",
+      "source_modified_at": 1794589067.038459,
+      "import_sha256": "35289f1a00083b42796c9ec34ad0f2242ef6b0afea1fea158bb32425901966b6",
+      "bytes": 100967,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/kai_work.png",
+      "source_sha256": "6454076968694f08f05a15cf5cfec5e0d013b7130a14c99f924a474aae74a4da",
+      "source_modified_at": 1794589068.0041575,
+      "import_sha256": "6454076968694f08f05a15cf5cfec5e0d013b7130a14c99f924a474aae74a4da",
+      "bytes": 36367,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/mei_concerned.png",
+      "source_sha256": "3517de4450d57a1d24232d120caf2e830ecae5552405484b388e5568b78639d0",
+      "source_modified_at": 1794589067.4338074,
+      "import_sha256": "3517de4450d57a1d24232d120caf2e830ecae5552405484b388e5568b78639d0",
+      "bytes": 111093,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/mei_happy.png",
+      "source_sha256": "6a4ba4e9b42292e943a612e7adeb882dca00084564003de82d45f2dd8f15bfd6",
+      "source_modified_at": 1794589067.5209644,
+      "import_sha256": "6a4ba4e9b42292e943a612e7adeb882dca00084564003de82d45f2dd8f15bfd6",
+      "bytes": 111318,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/mei_neutral.png",
+      "source_sha256": "924830a62650e22e4f0a1f1c0897c692508c2796504eabca9ea591aa2f8d8755",
+      "source_modified_at": 1794589067.3482506,
+      "import_sha256": "924830a62650e22e4f0a1f1c0897c692508c2796504eabca9ea591aa2f8d8755",
+      "bytes": 109891,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/mei_work.png",
+      "source_sha256": "cc9065355d7d019daf6ebb86dd861324e11280709e8a3947547018b94dc9dd78",
+      "source_modified_at": 1794589068.062447,
+      "import_sha256": "cc9065355d7d019daf6ebb86dd861324e11280709e8a3947547018b94dc9dd78",
+      "bytes": 36170,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/thiri_concerned.png",
+      "source_sha256": "264d46d83da2c6603f1b24713517b1ceb43e982973cfa7d9422c5423ebc085ec",
+      "source_modified_at": 1794589067.7364783,
+      "import_sha256": "264d46d83da2c6603f1b24713517b1ceb43e982973cfa7d9422c5423ebc085ec",
+      "bytes": 96197,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/thiri_happy.png",
+      "source_sha256": "616bc5c040d5372758924a36a4ad212c2d711ebb29277f1aaa0da14a3173e5df",
+      "source_modified_at": 1794589067.8225653,
+      "import_sha256": "616bc5c040d5372758924a36a4ad212c2d711ebb29277f1aaa0da14a3173e5df",
+      "bytes": 94864,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/characters/thiri_neutral.png",
+      "source_sha256": "5a5d86fdc175776e823058332e0db60bd718ee0334de1608ff8b7b4812f5121a",
+      "source_modified_at": 1794589067.642842,
+      "import_sha256": "5a5d86fdc175776e823058332e0db60bd718ee0334de1608ff8b7b4812f5121a",
+      "bytes": 93999,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/air_module_cutaway.png",
+      "source_sha256": "e5aabd6ea0f4ea171f3b7e75513a9aba147e8c71cc5312dcbd55495008be6f0a",
+      "source_modified_at": 1794589068.936519,
+      "import_sha256": "e5aabd6ea0f4ea171f3b7e75513a9aba147e8c71cc5312dcbd55495008be6f0a",
+      "bytes": 74910,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/ice_patch.png",
+      "source_sha256": "c7842fd50a48bd90ff0ae14d4cdf48eb157c57cabd1c695d7d349f1b33992d6e",
+      "source_modified_at": 1794589068.6903832,
+      "import_sha256": "c7842fd50a48bd90ff0ae14d4cdf48eb157c57cabd1c695d7d349f1b33992d6e",
+      "bytes": 1268,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/leak_marker.png",
+      "source_sha256": "7b910cd4e0c45c6c6d21b077b488aa35c1ec85d4dcd8a01cce0ff4e4c0315e91",
+      "source_modified_at": 1794589068.969929,
+      "import_sha256": "7b910cd4e0c45c6c6d21b077b488aa35c1ec85d4dcd8a01cce0ff4e4c0315e91",
+      "bytes": 382,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/panel.png",
+      "source_sha256": "681691159ba137b18eba8e5351266875e0aeb94d5f1e8484bc15126fa6929bad",
+      "source_modified_at": 1794589068.5450227,
+      "import_sha256": "681691159ba137b18eba8e5351266875e0aeb94d5f1e8484bc15126fa6929bad",
+      "bytes": 3254,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/panel_cover.png",
+      "source_sha256": "4347a1708b627d4fb9ebd95b7015841787d23660af7d71bf076a124a2d2f5b21",
+      "source_modified_at": 1794589068.569162,
+      "import_sha256": "4347a1708b627d4fb9ebd95b7015841787d23660af7d71bf076a124a2d2f5b21",
+      "bytes": 2834,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/patch_sticker.png",
+      "source_sha256": "1064e9f7ba3b31d02720c6ac564c72b8c58891babd677ffd3fced19211ef2ed3",
+      "source_modified_at": 1794589069.0325985,
+      "import_sha256": "1064e9f7ba3b31d02720c6ac564c72b8c58891babd677ffd3fced19211ef2ed3",
+      "bytes": 1227,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/rock_large.png",
+      "source_sha256": "c6899802dea4fe90da29c20cf0eed61757d05dd63284f3107450293114e1c903",
+      "source_modified_at": 1794589068.6663828,
+      "import_sha256": "c6899802dea4fe90da29c20cf0eed61757d05dd63284f3107450293114e1c903",
+      "bytes": 1414,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/rock_medium.png",
+      "source_sha256": "d4e5f5aad878c174e2a393eb70db3b1d4f7d8cbad7e8ed6a7070e8087f45f464",
+      "source_modified_at": 1794589068.641924,
+      "import_sha256": "d4e5f5aad878c174e2a393eb70db3b1d4f7d8cbad7e8ed6a7070e8087f45f464",
+      "bytes": 651,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/rock_small.png",
+      "source_sha256": "4c1adcd835e54400af34846896ce210ba0b2d9329c0e7942f8b08b27bb740096",
+      "source_modified_at": 1794589068.622098,
+      "import_sha256": "4c1adcd835e54400af34846896ce210ba0b2d9329c0e7942f8b08b27bb740096",
+      "bytes": 219,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/rover_top.png",
+      "source_sha256": "6a3a041eee2b761634413db1815658349e372ae2f45eeff0189c2280a014bb25",
+      "source_modified_at": 1794589068.5990808,
+      "import_sha256": "6a3a041eee2b761634413db1815658349e372ae2f45eeff0189c2280a014bb25",
+      "bytes": 3506,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/minigames/wire_board.png",
+      "source_sha256": "e1f7580a6a4fe16791e825b460370f25cc540fc7cd317603b04fbb9e6bf4f807",
+      "source_modified_at": 1794589068.8178396,
+      "import_sha256": "e1f7580a6a4fe16791e825b460370f25cc540fc7cd317603b04fbb9e6bf4f807",
+      "bytes": 58081,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/overlays/frost_corners.png",
+      "source_sha256": "2804b8ed2da27ef54d76abbc88df7d0edb69e4f4a192364fab8f6261c49d6125",
+      "source_modified_at": 1794589069.0830975,
+      "import_sha256": "2804b8ed2da27ef54d76abbc88df7d0edb69e4f4a192364fab8f6261c49d6125",
+      "bytes": 38952,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/overlays/hiss_puff.png",
+      "source_sha256": "27bd05f58d95586ea4b3623e9fbb3a0559bf33de4b76caa04460bb1e2af87eba",
+      "source_modified_at": 1794589068.0844529,
+      "import_sha256": "27bd05f58d95586ea4b3623e9fbb3a0559bf33de4b76caa04460bb1e2af87eba",
+      "bytes": 251,
+      "handoff_updated": false
+    },
+    {
+      "path": "public/assets/overlays/spark.png",
+      "source_sha256": "2c95de494358b14910ec8774188c3aab9e3707481ab50b605de06576075bc4b0",
+      "source_modified_at": 1794589068.0804906,
+      "import_sha256": "2c95de494358b14910ec8774188c3aab9e3707481ab50b605de06576075bc4b0",
+      "bytes": 164,
+      "handoff_updated": false
+    },
+    {
+      "path": "scripts/check_asset_cleanup.py",
+      "source_sha256": "1e8776080e174f10acb86bad318105732e72eb2f8cdb6ba13bceba1f1bf13cbd",
+      "source_modified_at": 1794589114.432922,
+      "import_sha256": "1e8776080e174f10acb86bad318105732e72eb2f8cdb6ba13bceba1f1bf13cbd",
+      "bytes": 3290,
+      "handoff_updated": false
+    },
+    {
+      "path": "scripts/prepare_assets.py",
+      "source_sha256": "75c1634183b0d0486e38e4456a5d6f440cda22b9626d3c52077712a6385ff87b",
+      "source_modified_at": 1794589064.249298,
+      "import_sha256": "75c1634183b0d0486e38e4456a5d6f440cda22b9626d3c52077712a6385ff87b",
+      "bytes": 8370,
+      "handoff_updated": false
+    },
+    {
+      "path": "asset-preparation/references/setting-reference.jpg",
+      "original_name": "photo_2026-11-08_21-20-44.jpg",
+      "source_sha256": "2f6603606af4290dcfffab4bf98a993536dfc1a4c40ef6b72c4ed53ea7f03cdb",
+      "import_sha256": "2f6603606af4290dcfffab4bf98a993536dfc1a4c40ef6b72c4ed53ea7f03cdb",
+      "bytes": 267610,
+      "handoff_updated": false
+    }
+  ],
+  "imported_at_utc": "2026-11-14T09:29:53.015136+06:30",
+  "target_project": "D:\\Projects\\Build-a-Junior-Astronaut-Mission-Trainer"
+}
